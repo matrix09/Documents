@@ -1,0 +1,6996 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/ -->
+<html id="XenForo" lang="en-US" dir="LTR" class="Public LoggedOut NoSidebar  Responsive hasJs NoTouch HasDragDrop js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" xmlns:fb="https://www.facebook.com/2008/fbml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+		<!--<base href="https://forum.unity.com/">--><base href=".">
+		<script async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/async-ads.js.下载"></script><script src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/1062735023749175" async=""></script><script src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/1575565272740965" async=""></script><script async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/fbevents.js.下载"></script><script type="text/javascript" async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/elqCfg.min.js.下载"></script><script type="text/javascript" async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/conversion_async.js.下载"></script><script type="text/javascript" async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/roundtrip.js.下载"></script><script type="text/javascript" async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/analytics.js.下载"></script><script type="text/javascript" async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/cse.js.下载"></script><script type="text/javascript" async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/cse.js.下载"></script><script async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/gtm.js.下载"></script><script>
+			var _b = document.getElementsByTagName('base')[0], _bH = "https://forum.unity.com/";
+			if (_b && _b.href != _bH) _b.href = _bH;
+		</script>
+	
+
+	<title>Waypoints and constant/variable speed problems? | Unity Community</title>
+	
+	
+	<link href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/css" rel="stylesheet">
+	<link rel="stylesheet" href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/unity-core.css">
+	<link rel="stylesheet" href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/unity-helpers.css">
+	<link rel="stylesheet" href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/css.php">
+	<link rel="stylesheet" href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/css(1).php">
+	
+	
+
+		<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TXKTVW');</script>
+	<!-- End Google Tag Manager -->
+	<script src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/jquery-1.11.0.min.js.下载"></script>	
+		
+	<script src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/xenforo.js.下载"></script>
+
+	
+	<link rel="apple-touch-icon" href="https://unity3d.com/files/images/ogimg.jpg">
+	<link rel="alternate" type="application/rss+xml" title="RSS feed for Unity Community" href="https://forum.unity.com/forums/-/index.rss">
+	
+	
+	<link rel="canonical" href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/">
+	<meta name="description" content="Hi all,
+
+Basically I have my waypoints all setup and working, however my gameobject slows down as it reaches a waypoint, this means that my...">	<meta property="og:site_name" content="Unity Community">
+	
+<meta property="og:image" content="http://www.alabsoft.com/images/unity1.jpg">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/">
+	<meta property="og:title" content="Waypoints and constant/variable speed problems?">
+	<meta property="og:description" content="Hi all,
+
+Basically I have my waypoints all setup and working, however my gameobject slows down as it reaches a waypoint, this means that my...">
+	
+	
+	
+
+<!-- Custom head -->
+	<!-- Fav Icon. -->
+	<link rel="shortcut icon" href="https://unity3d.com/profiles/unity3d/themes/unity/images/ui/favicons/favicon.ico">
+	<link rel="icon" type="image/png" href="https://unity3d.com/profiles/unity3d/themes/unity/images/ui/favicons/favicon.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://unity3d.com/profiles/unity3d/themes/unity/images/ui/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://unity3d.com/profiles/unity3d/themes/unity/images/ui/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://unity3d.com/profiles/unity3d/themes/unity/images/ui/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://unity3d.com/profiles/unity3d/themes/unity/images/ui/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://unity3d.com/profiles/unity3d/themes/unity/images/ui/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="https://unity3d.com/profiles/unity3d/themes/unity/images/ui/favicons/apple-touch-icon.png">
+	<meta name="msapplication-TileColor" content="#002835">
+	<meta name="msapplication-TileImage" content="https://unity3d.com/profiles/unity3d/themes/unity/images/ui/favicons/tileicon-144x144.png">
+	
+	<!-- JS -->
+	
+	<script>(function(){ var cx = '002645370080425984202:i_d7wpkpdzy'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script>
+  
+  
+  <script type="text/javascript" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/modernizr.min.js.下载"></script>
+
+  <script type="text/javascript" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/core.js.下载"></script>
+  <script type="text/javascript" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/mobile-core.js.下载"></script>
+  <!-- Css -->
+  <link href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/css(2)" rel="stylesheet">
+  <link href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/style.css" media="screen" rel="stylesheet">
+  
+	
+<!-- /Custom head -->
+
+
+<script async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/hotjar-632820.js.下载"></script><script src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/jsapi" type="text/javascript"></script><script src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/jsapi" type="text/javascript"></script><link type="text/css" href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/default+en.css" rel="stylesheet"><link type="text/css" href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/default.css" rel="stylesheet"><script type="text/javascript" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/default+en.I.js.下载"></script><link type="text/css" href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/default+en.css" rel="stylesheet"><link type="text/css" href="./Waypoints and constant_variable speed problems_ _ Unity Community_files/default.css" rel="stylesheet"><script type="text/javascript" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/default+en.I.js.下载"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+border-color: #D9D9D9;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+border-color: #2F5BB7;
+background-color: #357AE8;
+background-image: none;
+filter: none;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-color: #CCCCCC;
+border-bottom-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #CCCCCC;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #5284BD;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #5284BD;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #5284BD;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #5284BD;
+}
+.gsc-cursor-page {
+color: #5284BD;
+}
+a.gsc-trailing-more-results:link {
+color: #5284BD;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #333333;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #009933;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #5284BD;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #CCCCCC;
+background-color: #FFFFFF;
+color: #5284BD;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #F6F6F6;
+background-color: #F6F6F6;
+}
+.gsc-completion-title {
+color: #5284BD;
+}
+.gsc-completion-snippet {
+color: #333333;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #1155CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #1155CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #333333;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #009933;
+}
+.gsc-input input.gsc-input {
+background: none repeat scroll 0% 0% white !important;
+}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gscsep_a{display:none}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:5.5px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><script async="true" type="text/javascript" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/YUPE2Q443JE3RJBT3VY4CN"></script><script async="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/modules-7579e9ce0bcb2fbf460db394bab8dbd6.js.下载"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script type="text/javascript" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/sendrolling.js.下载"></script><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out"><img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(1)"><img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(2)"><img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(3)"><img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(4)"></div><div style="width: 1px; height: 1px; display: inline; position: absolute;"><img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(5)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(6)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(7)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(8)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(9)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(10)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(11)">
+<img height="1" width="1" style="border-style:none;" alt="" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/out(12)">
+</div></head>
+
+<body class="node12 node4 SelectQuotable" style="">
+
+
+
+
+<!-- Google Tag Manager (noscript) -->
+
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+
+ <div id="headerMover">
+ <div id="master-wrapper">
+  <div id="page" class="page clear has-submenu">
+   
+
+
+<header id="main-header" class="main-header clear has-submenu">
+	<div class="wrap clear no-userinfo">
+		<a href="https://forum.unity.com/" class="unity-logo"></a>
+		<div class="main-navigation clear">
+			<ul class="main-menu">
+				<li class="menu-363"><a href="https://unity3d.com/unity" title="">Products</a></li>
+				<li class="menu-69465"><a href="https://unity3d.com/solutions">Solutions</a></li>
+				<li class="menu-642"><a href="https://unity3d.com/showcase" title="">Made with Unity</a></li>
+				<li class="menu-398"><a href="https://unity3d.com/learn">Learn</a></li>
+				<li class="menu-367 active-trail active"><a class="active-trail active" href="https://unity3d.com/community">Community</a></li>
+				<li class="menu-366"><a href="https://unity3d.com/asset-store" title="">Asset Store</a></li>
+				<li class="menu-2984 last"><a href="https://unity3d.com/get-unity" title="">Get Unity</a></li>
+			</ul>
+		</div>
+		<div class="main-tools">
+			<a class="tool tool-menu toggle-panel" data-panel="mobile-navigation">
+				<div class="icon"></div>
+			</a>
+			<a class="tool tool-search toggle-panel" data-panel="search-panel">
+				<div class="icon"></div>
+			</a>
+			<a class="tool user-icon toggle-panel" data-panel="user-panel">
+				
+					<img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/user-default-light64x64.png" class="avatar">
+				
+			</a>
+		</div>
+		<nav class="sub-nav">
+			<div class="wrap">
+				<ul class="secondary-menu">
+					<li class="menu-383 first active-trail active"><a href="https://forum.unity3d.com/" title="" class="active-trail active">Forums</a></li>
+					<li class="menu-384"><a href="http://answers.unity3d.com/" title="">Answers</a></li>
+					<li class="menu-385"><a href="http://feedback.unity3d.com/" title="">Feedback</a></li>
+					<li class="menu-767"><a href="http://issuetracker.unity3d.com/" title="">Issue Tracker</a></li>
+					<li class="menu-933"><a href="https://blogs.unity3d.com/" title="">Blog</a></li>
+					<li class="menu-54331"><a href="https://unity3d.com/unity/beta" title="">Beta Program</a></li>
+					<li class="menu-764"><a href="https://unity3d.com/community/evangelists">Evangelists</a></li>
+					<li class="menu-860"><a href="https://unity3d.com/community/user-groups">User Groups</a></li>
+					<li class="menu-69023 last"><a href="https://unity3d.com/user-research" title="">User Research</a></li>
+				</ul>
+				<script>
+					var submore = 'More';
+				</script>
+			</div>
+		</nav>
+	</div>
+</header>
+
+<div id="search-panel" class="header-panel search-panel clear">
+	<div class="panel-content clear">
+		<h4>Search Unity</h4>
+		<script>
+			var blank = 'https://unity3d.com/profiles/unity3d/themes/unity/images/ui/other/blank100.gif';
+			(function () {
+				var cx = '002645370080425984202:i_d7wpkpdzy';
+				var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+			})();
+		</script>
+		<div class="search-box">
+			<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div class="gsc-control-wrapper-cse" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 " style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="search" id="gsc-i-id1" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" style="display: none;"><span class="gscb_a" id="gs_cb50">×</span></a></div></td></tr></tbody></table></div><input type="hidden" name="bgresponse" id="bgresponse"></td><td class="gsc-search-button"><input type="image" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/search_box_icon.png" class="gsc-search-button gsc-search-button-v2" title="search"></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="clear results">&nbsp;</div></td></tr></tbody></table><table cellspacing="0" cellpadding="0" class="gsc-branding"><tbody><tr style="display: none;"><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/googlelogo_grey_46x15dp.png" class="gsc-branding-img" srcset="https://www.google.com/cse/static/images/2x/googlelogo_grey_46x15dp.png 2x"></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div><div class="gsc-tabsAreaInvisible"></div><div class="gsc-above-wrapper-area-invisible"><table cellspacing="0" cellpadding="0" class="gsc-above-wrapper-area-container"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table cellspacing="0" cellpadding="0" class="gsc-resultsHeader"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div class="gsc-result-selector gsc-one-result" title="show one result">&nbsp;</div><div class="gsc-result-selector gsc-more-results" title="show more results">&nbsp;</div><div class="gsc-result-selector gsc-all-results" title="show all results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div></div></div>
+		</div>
+	</div>
+</div>
+
+<div id="user-panel" class="header-panel user-panel clear">
+	<div class="panel-content clear txt-c">
+		
+		<div class="sign-in">
+			<img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/user-default128x128.png" class="avatar">
+			<h2>Unity ID</h2>
+			<p class="mb30">A Unity ID allows you to buy and/or subscribe to Unity products and services, shop in the Asset Store and participate
+				in the Unity community.</p>
+			<a href="https://forum.unity.com/login/" class="signin-btn btn mr15 mb10 js-cms-oauth-login-url">Log in</a>
+			<a href="https://id.unity.com/account/new" class="signup-btn btn mb10">Create a Unity ID</a>
+		</div>
+  
+	</div>
+</div>
+
+<div id="panel-overlay" class="panel-overlay toggle-panel" data-panel="overlay"></div>
+<div id="alert-overlay" class="alert-overlay close-alert"></div>
+<div id="mobile-navigation" class="header-panel mobile-navigation clear">
+	<div class="panel-content clear">
+		<div class="mb30 bb clear">
+			<ul>
+				<li><a href="https://unity3d.com/">Home</a></li>
+				<li><a href="https://unity3d.com/unity">Unity</a></li>
+				<li><a href="https://unity3d.com/services">Services</a></li>
+				<li><a href="https://unity3d.com/showcase">Made with Unity</a></li>
+				<li><a href="https://unity3d.com/learn">Learn</a></li>
+				<li>
+					<a href="https://forum.unity.com/community" class="active-trail active">Community</a>
+					<ul class="secondary-menu">
+						<li class="menu-383 first active-trail active"><a href="https://forum.unity3d.com/" title="">Forums</a></li>
+						<li class="menu-384"><a href="http://answers.unity3d.com/" title="">Answers</a></li>
+						<li class="menu-385"><a href="http://feedback.unity3d.com/" title="">Feedback</a></li>
+						<li class="menu-767"><a href="http://issuetracker.unity3d.com/" title="">Issue Tracker</a></li>
+						<li class="menu-933"><a href="https://blogs.unity3d.com/" title="">Blog</a></li>
+						<li class="menu-764"><a href="https://unity3d.com/community/evangelists" class="active-trail active">Evangelists</a></li>
+						<li class="menu-860"><a href="https://unity3d.com/community/user-groups">User Groups</a></li>
+						<li class="menu-69023 last"><a href="https://unity3d.com/user-research" title="">User Research</a></li>
+					</ul>
+				</li>
+				<li><a href="https://unity3d.com/asset-store">Asset Store</a></li>
+				<li><a href="https://unity3d.com/get-unity">Get Unity</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+   
+   
+
+
+
+
+<section id="section-content" class="thread_view section section-content">
+<div class="background"></div>
+<div class="hero clear"></div>
+<section id="content" class="thread_view content-wrapper gw clear mb80">
+	<div class="pageWidth">
+		<div class="pageContent">
+			<!-- main content area -->
+			
+			
+			
+			
+			
+			
+						
+						
+						
+						
+						<div class="breadBoxTop ">
+							
+							
+
+<nav>
+	
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+
+	<fieldset class="breadcrumb" style="">
+		<a href="https://forum.unity.com/misc/quick-navigation-menu?selected=node-12" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"><!--Jump to...--></a>
+			
+		<div class="boardTitle"><strong>Unity Community</strong></div>
+		
+		<span class="crumbs">
+			
+			
+			
+				<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+					<a href="https://forum.unity.com/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Forums</span></a>
+					<span class="arrow"><span>&gt;</span></span>
+				</span>
+			
+			
+			
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://forum.unity.com/#unity-community-discussion.4" class="crumb" rel="up" itemprop="url"><span itemprop="title">Unity Community Discussion</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+					<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a href="https://forum.unity.com/forums/scripting.12/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Scripting</span></a>
+						<span class="arrow"><span>&gt;</span></span>
+					</span>
+				
+			
+		</span>
+	</fieldset>
+</nav>
+						</div>
+						
+						
+						
+
+<div id="navigation" class="pageWidth withSearch">
+	<div class="nav-container">
+		<nav>
+<div class="navTabs">
+	
+	<ul class="publicTabs">
+	
+		<!-- home -->
+		
+		
+		
+		<!-- extra tabs: home -->
+		
+		
+		
+		<!-- forums -->
+		
+			<li class="navTab forums selected">
+			
+				
+				
+				<div class="tabLinks forumsTabLinks">
+					<div class="primaryContent menuHeader">
+						<h3>Forums</h3>
+						<div class="muted">Quick Links</div>
+					</div>
+					<ul class="secondaryContent blockLinksList">
+					
+						
+						<li><a href="https://forum.unity.com/"></a></li>
+						<li><a href="https://forum.unity.com/search/?type=post">Search Forums</a></li>
+						
+						<li><a href="https://forum.unity.com/find-new/posts" rel="nofollow">Recent Posts</a></li>
+					
+					</ul>
+				</div>
+			</li>
+		
+		
+		
+			
+		
+		<!-- extra tabs: middle -->
+		
+		
+		
+		<!-- members -->
+						
+		
+		<!-- extra tabs: end -->
+		
+
+		<!-- responsive popup -->
+		<li class="navTab navigationHiddenTabs Popup PopupControl PopupClosed PopupContainerControl" style="display: none;">	
+						
+			<a rel="Menu" class="navLink NoPopupGadget"><span class="menuIcon">Menu</span></a>
+			
+			
+		</li>
+			
+		
+		<!-- no selection -->
+		
+		
+	</ul>
+	
+	
+</div>
+
+<span class="helper"></span>
+			
+		</nav>	
+	</div>
+</div>
+
+						
+					
+						<!--[if lt IE 8]>
+							<p class="importantMessage">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</p>
+						<![endif]-->
+
+						
+						
+
+
+
+
+
+<div class="PanelScroller Notices" data-vertical="0" data-speed="400" data-interval="4000" style="display: block;">
+	<div class="scrollContainer">
+		<div class="PanelContainer" style="overflow: hidden; height: 41px;">
+			<ol class="Panels" style="width: 20000em; left: -2796px;"><li class="panel Notice DismissParent notice_47  cloned" data-notice="47" style="float: left; width: 932px; height: 41px;">
+	
+	<div class="baseHtml noticeContent"><font color="#009ac0">Unity 2017.2 beta is </font> <a href="http://bit.ly/2q2iCVF"> <font color="#FF0066">now available</font></a><font color="#009ac0"> for download.</font></div>
+	
+	
+		<a href="https://forum.unity.com/account/dismiss-notice?notice_id=47" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li>
+				
+					<li class="panel Notice DismissParent notice_52 " data-notice="52" style="float: left; width: 932px; height: 41px;">
+	
+	<div class="baseHtml noticeContent"><font color="#009ac0">Tune in to the </font> <a href="http://bit.ly/2xy36nW"> <font color="#FF0066">Unite Austin 2017 Keynote Livestream</font></a><font color="#009ac0">, Oct 3 at 6 PM Central Time.</font></div>
+	
+	
+		<a href="https://forum.unity.com/account/dismiss-notice?notice_id=52" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li>
+				
+					<li class="panel Notice DismissParent notice_49 " data-notice="49" style="float: left; width: 932px; height: 41px;">
+	
+	<div class="baseHtml noticeContent"><font color="#009ac0">Introducing the Unity Essentials Packs! Find out </font> <a href="https://forum.unity3d.com/threads/introducing-the-unity-essentials-packs-power-up-your-production-with-a-free-pack-per-subscription.484329/"> <font color="#FF0066">more</font></a><font color="#009ac0">.</font></div>
+	
+	
+		<a href="https://forum.unity.com/account/dismiss-notice?notice_id=49" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li>
+				
+					<li class="panel Notice DismissParent notice_29 " data-notice="29" style="float: left; width: 932px; height: 41px;">
+	
+	<div class="baseHtml noticeContent"><font color="#009ac0">Check out all the fixes for 5.6 on the </font> <a href="http://bit.ly/2h6TsQ7"> <font color="#FF0066">patch releases page</font></a><font color="#009ac0">.</font></div>
+	
+	
+		<a href="https://forum.unity.com/account/dismiss-notice?notice_id=29" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li>
+				
+					<li class="panel Notice DismissParent notice_48 " data-notice="48" style="float: left; width: 932px; height: 41px;">
+	
+	<div class="baseHtml noticeContent"><font color="#009ac0">Unity 2017.1 is </font> <a href="https://forum.unity3d.com/threads/2017-1-released.482680/"> <font color="#FF0066">now released</font></a><font color="#009ac0">.</font></div>
+	
+	
+		<a href="https://forum.unity.com/account/dismiss-notice?notice_id=48" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li>
+				
+					<li class="panel Notice DismissParent notice_47 " data-notice="47" style="float: left; width: 932px; height: 41px;">
+	
+	<div class="baseHtml noticeContent"><font color="#009ac0">Unity 2017.2 beta is </font> <a href="http://bit.ly/2q2iCVF"> <font color="#FF0066">now available</font></a><font color="#009ac0"> for download.</font></div>
+	
+	
+		<a href="https://forum.unity.com/account/dismiss-notice?notice_id=47" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li>
+				
+			<li class="panel Notice DismissParent notice_52  cloned" data-notice="52" style="float: left; width: 932px; height: 41px;">
+	
+	<div class="baseHtml noticeContent"><font color="#009ac0">Tune in to the </font> <a href="http://bit.ly/2xy36nW"> <font color="#FF0066">Unite Austin 2017 Keynote Livestream</font></a><font color="#009ac0">, Oct 3 at 6 PM Central Time.</font></div>
+	
+	
+		<a href="https://forum.unity.com/account/dismiss-notice?notice_id=52" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li></ol>
+		</div>
+	</div>
+	
+	<div class="navContainer">
+		<span class="navControls Nav JsOnly">
+			
+				<a id="n52" href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#n52" class="">
+					<span class="arrow"><span></span></span>
+					<!--1 -->Unite Austin</a>
+			
+				<a id="n49" href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#n49" class="">
+					<span class="arrow"><span></span></span>
+					<!--2 -->Unity Essentials Packs</a>
+			
+				<a id="n29" href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#n29" class="current">
+					<span class="arrow"><span></span></span>
+					<!--3 -->Patch releases</a>
+			
+				<a id="n48" href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#n48">
+					<span class="arrow"><span></span></span>
+					<!--4 -->2017.1 released</a>
+			
+				<a id="n47" href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#n47">
+					<span class="arrow"><span></span></span>
+					<!--5 -->2017.2 Beta</a>
+			
+		</span>
+	</div>
+</div>
+
+
+
+						
+						
+						
+						
+												
+							<!-- h1 title, description -->
+							<div class="titleBar">
+								
+								<h1>Waypoints and constant/variable speed problems?</h1>
+								
+								<p id="pageDescription" class="muted ">
+	Discussion in '<a href="https://forum.unity.com/forums/scripting.12/">Scripting</a>' started by <a href="https://forum.unity.com/members/greg-bassett.9047/" class="username" dir="auto">Greg-Bassett</a>, <a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/"><span class="DateTime" title="Oct 28, 2009 at 11:06 AM">Oct 28, 2009</span></a>.
+</p>
+								
+								<div id="threadSearch">
+  									<form action="https://forum.unity.com/search/search" method="post" class="formPopup">
+    										<input type="search" name="keywords" value="" class="textCtrl" placeholder="Search this thread..." title="Enter your search and hit enter" id="QuickSearchQuery">
+    										<input type="hidden" name="type[post][thread_id]" value="32954" id="search_bar_thread" class="AutoChecker" data-uncheck="#search_bar_title_only, #search_bar_nodes">
+  										<input type="hidden" name="_xfToken" value="">
+  									</form>
+								</div>
+								
+							
+							
+							</div>
+						
+						
+						
+						
+						
+						<!-- main template -->
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+<div class="pageNavLinkGroup">
+	<div class="linkGroup SelectionCountContainer">
+		
+		
+	</div>
+
+	
+</div>
+
+
+
+
+
+<form action="https://forum.unity.com/inline-mod/post/switch" method="post" class="InlineModForm section" data-cookiename="posts" data-controls="#InlineModControls" data-imodoptions="#ModerationSelect option">
+
+	<ol class="messageList" id="messageList">
+		
+			
+				
+
+
+<li id="post-213879" class="message   " data-author="Greg-Bassett">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/greg-bassett.9047/" class="username" dir="auto" itemprop="name">Greg-Bassett</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/greg-bassett.9047/" class="avatar Av9047m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/33369087fa1e89f2f3738e5083878924" width="96" height="96" alt="Greg-Bassett"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jul 28, 2009</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=9047" class="concealed" rel="nofollow">552</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Hi all,<br>
+<br>
+Basically I have my waypoints all setup and working, however my gameobject slows down as it reaches a waypoint, this means that my gameobject does not travel at a constant speed around all my waypoints.<br>
+<br>
+I have read lots of forum topics on this subject, and I have tried a fair few waypoint implementations to get this to work, I did manage to get the gameobject to travel at a constant speed using Sam at FPS waypoint solution.<br>
+<br>
+<a href="http://forum.unity3d.com/viewtopic.php?t=31412" target="_blank" class="externalLink" rel="nofollow">http://forum.unity3d.com/viewtopic.php?t=31412</a><br>
+<br>
+However, I need my waypoint solution to work with a player controlled variable speed gameobject.<br>
+<br>
+And Sam's example calculates the waypoint bezier curve based on time to complete the waypoints layout, prior to moving the gameobject.<br>
+<br>
+I have had this working using Darkbasic Professional, see video below:<br>
+<a href="http://www.alabsoft.com/vSlot/vSlot%20-%20Work%20in%20progress/vSlot%20-%20Work%20in%20progress.html" target="_blank" class="externalLink" rel="nofollow">http://www.alabsoft.com/vSlot/vSlot - Work in progress/vSlot - Work in progress.html</a><br>
+<br>
+However, I want to code this project in Unity now, as Unity is so much more powerful, and with cross-browser support etc.<br>
+<br>
+In Darkbasic Professinal there is a command called CurveAngle.<br>
+<br>
+Function CurveAngle(fA As Single, fDa As Single, fSp As Single) As Single<br>
+<br>
+This command will return an auto-interpolated angle based on a given speed. This command will gradually move a number from its current value to a destination value at a certain speed.<br>
+<br>
+I have found a similar command in the MathFX class from the Unify Wiki called Clerp.<br>
+<br>
+But I cannot get it to work? here is my pseudo code, I know the transform.eulerAngles.y does not work? all I want to do is get the current y angle of the gameobject that my script is attached too.<br>
+<br>
+<div class="bbCodeBlock bbCodeCode">
+  <div class="type">Code (csharp):</div>
+  <div class="code"><ol class="csharp" style="font-family:monospace;"><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #008de4;">if</span><span style="color: #000000;">(</span><a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=Vector3"><span style="color: #2b91af;">Vector3</span></a>.<a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=Distance"><span style="color: #813400;">Distance</span></a><span style="color: #000000;">(</span>transform.<a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=position"><span style="color: #8b6ba6;">position</span></a>,waypoints<span style="color: #000000;">[</span>currentWaypoint<span style="color: #000000;">]</span><span style="color: #000000;">)</span><span style="color: #008000;">&lt;=</span><a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=damping"><span style="color: #8b6ba6;">damping</span></a><span style="color: #000000;">)</span> <span style="color: #000000;">{</span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp; <span style="color: #008000; font-style: italic;">//Debug.Log("Collided with waypoint");</span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp; currentWaypoint<span style="color: #008000;">++</span>;</div></li>
+<li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp; currentHeading <span style="color: #008000;">=</span> waypoints<span style="color: #000000;">[</span>currentWaypoint<span style="color: #000000;">]</span>;</div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">}</span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #008000; font-style: italic;">// Get players current/old y angle</span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">oldangle <span style="color: #008000;">=</span> transform.<a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=eulerAngles"><span style="color: #8b6ba6;">eulerAngles</span></a>.<span style="color: #2b91af;">y</span>;</div></li>
+<li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp; &nbsp; </div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #008000; font-style: italic;">// Point player in direction of current waypoint</span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #008000; font-style: italic;">//transform.LookAt(currentHeading); </span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp; &nbsp; </div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #008000; font-style: italic;">// Get players new y angle</span></div></li>
+<li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">newangle <span style="color: #008000;">=</span> transform.<a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=eulerAngles"><span style="color: #8b6ba6;">eulerAngles</span></a>.<span style="color: #2b91af;">y</span>;</div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp; &nbsp; </div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #008000; font-style: italic;">// Now interpolate (create a smooth curve) the angle based on the speed and new and old angles</span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #008000; font-style: italic;">//finalangle = Mathfx.Clerp(oldangle, newangle, speed);</span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li>
+<li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #008000; font-style: italic;">// Rotate player&nbsp; &nbsp; </span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">transform.<a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=eulerAngles"><span style="color: #8b6ba6;">eulerAngles</span></a> <span style="color: #008000;">=</span> <a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=Vector3"><span style="color: #2b91af;">Vector3</span></a><span style="color: #000000;">(</span><span style="color: #0000c0;">0</span>, finalangle, <span style="color: #0000c0;">0</span><span style="color: #000000;">)</span>;</div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #008000; font-style: italic;">// Move player forwards </span></div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">transform.<a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=Translate"><span style="color: #813400;">Translate</span></a><span style="color: #000000;">(</span><span style="color: #0000c0;">0</span>, <span style="color: #0000c0;">0</span>, <a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=speed"><span style="color: #8b6ba6;">speed</span></a> <span style="color: #008000;">*</span> <a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=Time"><span style="color: #2b91af;">Time</span></a>.<a target="_blank" rel="nofollow" href="http://unity3d.com/support/documentation/ScriptReference/30_search.html?q=deltaTime"><span style="color: #8b6ba6;">deltaTime</span></a><span style="color: #000000;">)</span>;</div></li>
+<li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li>
+<li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li>
+</ol></div>
+</div>Here are some screenshots of my app in Unity.<br>
+<br>
+<img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/proxy.php" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://www.alabsoft.com/images/unity1.jpg" style=""><br>
+This shows how the layout is constructed at runtime using Instantiate command, and the placement of the waypoints for each lane.<br>
+<br>
+<img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/proxy(1).php" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://www.alabsoft.com/images/unity3.jpg" style=""><br>
+This shows the Hierarchy view with the cloned track sections.<br>
+<br>
+<img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/proxy(2).php" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://www.alabsoft.com/images/unity2.jpg" style=""><br>
+This final image shows the layout with the waypoints hidden.<br>
+<br>
+I have big plans for this project, multi-player, huge layouts, fastest lap competitions etc, etc, so any help with getting the basics working will be greatly appreciated! <img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)"><br>
+<br>
+[/img]
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/greg-bassett.9047/" class="username author" dir="auto">Greg-Bassett</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/" title="Permalink" class="datePermalink"><span class="DateTime" title="Oct 28, 2009 at 11:06 AM">Oct 28, 2009</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/213879/permalink">#1</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-213879">
+	
+	<div class="likesSummary secondaryContent">
+		<span class="LikeText">
+			<a href="https://forum.unity.com/members/afvbmp.685474/" class="username" dir="auto">afvbmp</a> likes this.
+		</span>
+	</div>
+</div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-213942" class="message   " data-author="andeeeee">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/andeeeee.81/" class="username" dir="auto" itemprop="name">andeeeee</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/andeeeee.81/" class="avatar Av81m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/81.jpg" width="96" height="96" alt="andeeeee"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jul 19, 2005</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=81" class="concealed" rel="nofollow">8,768</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I've attached a Bezier/spline library script. It is still not finished, but I think it might help you out here. There's a class defined in it called CRSpline (ie, Catmull-Rom spline). This basically takes any number of waypoints and interpolates a smooth curve between them. This is mostly pretty straightforward but for one thing. Catmull-Rom splines actually have an "invisible" extra control point at the start and another at the end of the curve. This is to control the speed and direction of the curve at the start and the end of the interpolation. To create a cyclic track, you will need to set the first point of the spline to be one waypoint behind the start point and the last point in of the spline to be one beyond the finish, if you get what I mean.<br>
+<br>
+This is by no means foolproof, but it should help reduce discontinuities in speed going from one track section to the next. The main other problem with speed is when waypoints are not evenly spaced. There is a GizmoDraw function in the CRSpline class that draws the curve along with a velocity vector. As you increase its parameter from 0 to 1, the velocity vector will move along the curve, showing you the velocity of the curve at that point (ie, the length of the line). This should help you diagnose where speed changes are happening and suggest where the waypoints need to be closer together or farther apart.<br>
+<br>
+As I said, not entirely foolproof - please ask again if you have any trouble with this. I'll "launch" this library properly soon, when the missing functionality is in place.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+
+<div class="attachedFiles">
+	<h4 class="attachedFilesHeader">Attached Files:</h4>
+	<ul class="attachmentList SquareThumbs" data-thumb-height="50" data-thumb-selector="div.thumbnail &gt; a">
+		
+			<li class="attachment" title="$curve_443.cs">
+				<div class="boxModelFixer primaryContent">
+					
+					<div class="thumbnail">
+						
+							<a href="https://forum.unity.com/attachments/curve_443-cs.7849/" target="_blank" class="genericAttachment SquareThumb"></a>
+						
+					</div>
+					
+					<div class="attachmentInfo pairsJustified">
+						<h6 class="filename"><a href="https://forum.unity.com/attachments/curve_443-cs.7849/" target="_blank">$curve_443.cs</a></h6>
+						<dl><dt>File size:</dt> <dd>3.4 KB</dd></dl>
+						<dl><dt>Views:</dt> <dd>4,403</dd></dl>
+					</div>
+				</div>
+			</li>
+		
+	</ul>
+</div>
+
+
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/andeeeee.81/" class="username author" dir="auto">andeeeee</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-213942" title="Permalink" class="datePermalink"><span class="DateTime" title="Oct 28, 2009 at 2:40 PM">Oct 28, 2009</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-213942" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/213942/permalink">#2</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-213942">
+	
+	<div class="likesSummary secondaryContent">
+		<span class="LikeText">
+			<a href="https://forum.unity.com/members/oferei.160550/" class="username" dir="auto">oferei</a> likes this.
+		</span>
+	</div>
+</div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-217118" class="message   " data-author="Greg-Bassett">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/greg-bassett.9047/" class="username" dir="auto" itemprop="name">Greg-Bassett</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/greg-bassett.9047/" class="avatar Av9047m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/33369087fa1e89f2f3738e5083878924" width="96" height="96" alt="Greg-Bassett"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jul 28, 2009</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=9047" class="concealed" rel="nofollow">552</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Thanks for info, I will download and take a look.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/greg-bassett.9047/" class="username author" dir="auto">Greg-Bassett</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-217118" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 2, 2009 at 2:02 PM">Nov 2, 2009</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-217118" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/217118/permalink">#3</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-217118"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-343008" class="message   " data-author="Neodrop">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/neodrop.4097/" class="username" dir="auto" itemprop="name">Neodrop</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/neodrop.4097/" class="avatar Av4097m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/4097.jpg" width="96" height="96" alt="Neodrop"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Oct 24, 2008</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=4097" class="concealed" rel="nofollow">1,357</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					andeeee, did you improve your code?<br>
+Can I use it in my Antares Project ?
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/neodrop.4097/" class="username author" dir="auto">Neodrop</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-343008" title="Permalink" class="datePermalink"><span class="DateTime" title="Jul 10, 2010 at 8:30 PM">Jul 10, 2010</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-343008" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/343008/permalink">#4</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-343008"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-344195" class="message   " data-author="andeeeee">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/andeeeee.81/" class="username" dir="auto" itemprop="name">andeeeee</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/andeeeee.81/" class="avatar Av81m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/81.jpg" width="96" height="96" alt="andeeeee"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jul 19, 2005</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=81" class="concealed" rel="nofollow">8,768</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					It works OK as it is. I think my intention at the time was to add a natural spline too, but the existing code has been used quite a few times and seems to be OK.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/andeeeee.81/" class="username author" dir="auto">andeeeee</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-344195" title="Permalink" class="datePermalink"><span class="DateTime" title="Jul 12, 2010 at 4:37 PM">Jul 12, 2010</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-344195" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/344195/permalink">#5</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-344195"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-344247" class="message   " data-author="Neodrop">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/neodrop.4097/" class="username" dir="auto" itemprop="name">Neodrop</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/neodrop.4097/" class="avatar Av4097m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/4097.jpg" width="96" height="96" alt="Neodrop"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Oct 24, 2008</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=4097" class="concealed" rel="nofollow">1,357</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I have splines too in my Antares project, but other type.<br>
+Can I use your code (with your credits) in my public open source project ?
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/neodrop.4097/" class="username author" dir="auto">Neodrop</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-344247" title="Permalink" class="datePermalink"><span class="DateTime" title="Jul 12, 2010 at 6:05 PM">Jul 12, 2010</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-344247" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/344247/permalink">#6</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-344247"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-345074" class="message   " data-author="andeeeee">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/andeeeee.81/" class="username" dir="auto" itemprop="name">andeeeee</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/andeeeee.81/" class="avatar Av81m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/81.jpg" width="96" height="96" alt="andeeeee"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jul 19, 2005</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=81" class="concealed" rel="nofollow">8,768</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					It's public domain and I wrote it while working for Unity, so no credit required ;-)
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/andeeeee.81/" class="username author" dir="auto">andeeeee</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-345074" title="Permalink" class="datePermalink"><span class="DateTime" title="Jul 13, 2010 at 3:31 PM">Jul 13, 2010</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-345074" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/345074/permalink">#7</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-345074"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-345093" class="message   " data-author="Neodrop">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/neodrop.4097/" class="username" dir="auto" itemprop="name">Neodrop</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/neodrop.4097/" class="avatar Av4097m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/4097.jpg" width="96" height="96" alt="Neodrop"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Oct 24, 2008</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=4097" class="concealed" rel="nofollow">1,357</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Ok. Thank you.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/neodrop.4097/" class="username author" dir="auto">Neodrop</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-345093" title="Permalink" class="datePermalink"><span class="DateTime" title="Jul 13, 2010 at 3:43 PM">Jul 13, 2010</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-345093" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/345093/permalink">#8</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-345093"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-451774" class="message   " data-author="n0mad">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/n0mad.4986/" class="username" dir="auto" itemprop="name">n0mad</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/n0mad.4986/" class="avatar Av4986m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/4986.jpg" width="96" height="96" alt="n0mad"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jan 27, 2009</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=4986" class="concealed" rel="nofollow">3,732</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Awesome, thank you Andee ! <img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie8" alt=":D" title="Big Grin    :D">
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/n0mad.4986/" class="username author" dir="auto">n0mad</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-451774" title="Permalink" class="datePermalink"><span class="DateTime" title="Dec 14, 2010 at 1:27 PM">Dec 14, 2010</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-451774" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/451774/permalink">#9</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-451774"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-541582" class="message   " data-author="spanni87">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/spanni87.39219/" class="username" dir="auto" itemprop="name">spanni87</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/spanni87.39219/" class="avatar Av39219m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/avatar_m.png" width="96" height="96" alt="spanni87"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 20, 2011</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=39219" class="concealed" rel="nofollow">8</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I have 4 waypoints represented by the green arrows where I want the target to loop through these waypoints. The code that I used works fine i suppose but the problem is that when the target reaches the waypoints, it sticks to them as if the waypoint is holding the target and at a certain point the target is released and goes to the next waypoint. <br>
+<br>
+anybody knows what's the problem? Thanks in advance<br>
+<br>
+I also provided a link where I recorded my problem.<br>
+<br>
+<a href="http://www.youtube.com/watch?v=nrh34Cjf9qw" target="_blank" class="externalLink" rel="nofollow">http://www.youtube.com/watch?v=nrh34Cjf9qw</a><br>
+<br>
+CODE:<br>
+<br>
+var waypoint : Transform[];<br>
+var speed : float = 5000;<br>
+private var currentWaypoint: int;<br>
+var loop : boolean = true; <br>
+<br>
+function Awake(){<br>
+	waypoint[0] = transform;<br>
+}<br>
+<br>
+function Update () {<br>
+	if(currentWaypoint &lt; waypoint.length){<br>
+		var target : Vector3 = waypoint[currentWaypoint].position;<br>
+		var moveDirection : Vector3 = target - transform.position;<br>
+	<br>
+		var velocity = rigidbody.velocity;<br>
+		if(moveDirection.magnitude &lt; 1){<br>
+			currentWaypoint++;<br>
+		}<br>
+		else{<br>
+			velocity = moveDirection.normalized * speed;<br>
+		}<br>
+	}<br>
+	else{<br>
+		if(loop){<br>
+			currentWaypoint=0;<br>
+		}<br>
+		else{<br>
+			velocity = Vector3.zero;<br>
+		}<br>
+	}<br>
+	<br>
+	rigidbody.velocity = velocity;<br>
+<br>
+}
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/spanni87.39219/" class="username author" dir="auto">spanni87</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-541582" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 3, 2011 at 10:40 AM">Apr 3, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-541582" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/541582/permalink">#10</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-541582"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-655702" class="message   " data-author="chubbspet">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/chubbspet.15838/" class="username" dir="auto" itemprop="name">chubbspet</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/chubbspet.15838/" class="avatar Av15838m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/15838.jpg" width="96" height="96" alt="chubbspet"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Feb 18, 2010</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=15838" class="concealed" rel="nofollow">1,193</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					<div class="bbCodeBlock bbCodeQuote" data-author="andeeee">
+	<aside>
+		
+			<div class="attribution type">andeeee said:
+				
+					<a href="https://forum.unity.com/goto/post?id=213942#post-213942" class="AttributionLink">↑</a>
+				
+			</div>
+		
+		<blockquote class="quoteContainer"><div class="quote">There is a GizmoDraw function in the CRSpline class that draws the curve along with a velocity vector. As you increase its parameter from 0 to 1, the velocity vector will move along the curve, showing you the velocity of the curve at that point (ie, the length of the line). This should help you diagnose where speed changes are happening and suggest where the waypoints need to be closer together or farther apart.</div><div class="quoteExpand">Click to expand...</div></blockquote>
+	</aside>
+</div>Hi Andy (or anyone)<br>
+<br>
+I'm using this script to draw curves and it works really well, thanks. I just want to know how can I get the yValue on the curve based on the xPosition of one of my gameobjects? Tjis object is a time line and it loops from -10 to 10 on the x axis. I just need to find the yValue of the curve at any given point.<br>
+<br>
+Please help me with this urgent problem, thanks
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/chubbspet.15838/" class="username author" dir="auto">chubbspet</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-655702" title="Permalink" class="datePermalink"><span class="DateTime" title="Aug 10, 2011 at 12:42 PM">Aug 10, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-655702" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/655702/permalink">#11</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-655702"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-656005" class="message   " data-author="chubbspet">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/chubbspet.15838/" class="username" dir="auto" itemprop="name">chubbspet</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/chubbspet.15838/" class="avatar Av15838m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/15838.jpg" width="96" height="96" alt="chubbspet"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Feb 18, 2010</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=15838" class="concealed" rel="nofollow">1,193</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					anyone that can shed some light?
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/chubbspet.15838/" class="username author" dir="auto">chubbspet</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-656005" title="Permalink" class="datePermalink"><span class="DateTime" title="Aug 10, 2011 at 7:22 PM">Aug 10, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-656005" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/656005/permalink">#12</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-656005"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-656034" class="message   " data-author="hippocoder">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/hippocoder.17948/" class="username" dir="auto" itemprop="name">hippocoder</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/hippocoder.17948/" class="avatar Av17948m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/17948.jpg" width="96" height="96" alt="hippocoder"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			<em class="userTitle" itemprop="title">Digital Ape</em>
+			<em class="userBanner bannerSkyBlue wrapped" itemprop="title"><span class="before"></span><strong>Moderator</strong><span class="after"></span></em>
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Apr 11, 2010</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=17948" class="concealed" rel="nofollow">19,735</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I remember this stuff back when I was doing a zuma clone. The solution I used was incredibly simple:<br>
+<br>
+1. after setting up splines in my editor, I would generate a linear array of points.<br>
+<br>
+2. to create the array you traverse the spline as you normally do, however you only add a point to the array when DISTANCE between the current position and the last sample point is greater than n.<br>
+<br>
+3. then you have an array of points each perfectly spaced apart.<br>
+<br>
+4. then you use Mathf.Lerp() to go between, and use only the time parameter to travel.<br>
+<br>
+x = lerp (prevpos, newpos, position)<br>
+<br>
+- when position &gt;1 you add one to prevpos and newpos, and subtract 1 from position.<br>
+<br>
+Thats all there is to it for constant speed, thats how I did it. It also solves issues of missing waypoints and so on.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/hippocoder.17948/" class="username author" dir="auto">hippocoder</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-656034" title="Permalink" class="datePermalink"><span class="DateTime" title="Aug 10, 2011 at 7:45 PM">Aug 10, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-656034" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/656034/permalink">#13</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-656034"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-656163" class="message   " data-author="chubbspet">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/chubbspet.15838/" class="username" dir="auto" itemprop="name">chubbspet</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/chubbspet.15838/" class="avatar Av15838m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/15838.jpg" width="96" height="96" alt="chubbspet"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Feb 18, 2010</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=15838" class="concealed" rel="nofollow">1,193</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Thanks Hippo<br>
+<br>
+I'm just a bit unclear about point 2 that you mentioned? Do you mean that I shoudl modify the way that I'm currently adding the points to my array so that the x values are evenly spaced? If so, I'm not sure how I'm going to achieve that...
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/chubbspet.15838/" class="username author" dir="auto">chubbspet</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-656163" title="Permalink" class="datePermalink"><span class="DateTime" title="Aug 10, 2011 at 9:33 PM">Aug 10, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-656163" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/656163/permalink">#14</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-656163"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-656746" class="message   " data-author="chubbspet">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/chubbspet.15838/" class="username" dir="auto" itemprop="name">chubbspet</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/chubbspet.15838/" class="avatar Av15838m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/15838.jpg" width="96" height="96" alt="chubbspet"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Feb 18, 2010</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=15838" class="concealed" rel="nofollow">1,193</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I just tried to take sample points of the curve, but that does not work., Man, if I could test some collider with the line renderer and get the x value at a point, that might even work - so frustrating...
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/chubbspet.15838/" class="username author" dir="auto">chubbspet</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-656746" title="Permalink" class="datePermalink"><span class="DateTime" title="Aug 11, 2011 at 10:54 AM">Aug 11, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-656746" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/656746/permalink">#15</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-656746"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-690375" class="message   " data-author="jeewanthasas">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/jeewanthasas.62561/" class="username" dir="auto" itemprop="name">jeewanthasas</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/jeewanthasas.62561/" class="avatar Av62561m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/avatar_m.png" width="96" height="96" alt="jeewanthasas"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Sep 8, 2011</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=62561" class="concealed" rel="nofollow">13</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Hi,<br>
+<br>
+If any one involved with mouse/ touch <b>dragged-path following</b>  after releasing the mouse button  or touch control (<b>NOT following the mouse point</b>)  in a game like<b> Air Traffic Controller/ Hurbour Master</b>, plase assist me to control the speed of the object movement.<br>
+<br>
+In my current script the mouse dragged path is followed  by player object but the moving speed depends on the mouse-dragged/ touch dragged-speed. I just need to move the object <b>in a constant speed</b>.<br>
+<br>
+I've attached the current script and please simply download the script and attached it to a game object and set<b> smooth </b> value to a value like 1000. It's works...!. But the object movement speed is relative to the mouse dragged speed/ touch-dragged speed.<br>
+<br>
+Please assist me to <b>move the object in a constant speed</b>. It<b><span style="text-decoration: underline"> should not depend on the dragging speed</span></b>.<br>
+<br>
+Thank you in advance... <img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)"><br>
+Cheers....<br>
+<br>
+Regards,<br>
+Jeewanthasas
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+
+<div class="attachedFiles">
+	<h4 class="attachedFilesHeader">Attached Files:</h4>
+	<ul class="attachmentList SquareThumbs" data-thumb-height="50" data-thumb-selector="div.thumbnail &gt; a">
+		
+			<li class="attachment" title="$TestOnMousedrag_DragonOnTestScene.cs">
+				<div class="boxModelFixer primaryContent">
+					
+					<div class="thumbnail">
+						
+							<a href="https://forum.unity.com/attachments/testonmousedrag_dragonontestscene-cs.24849/" target="_blank" class="genericAttachment SquareThumb"></a>
+						
+					</div>
+					
+					<div class="attachmentInfo pairsJustified">
+						<h6 class="filename"><a href="https://forum.unity.com/attachments/testonmousedrag_dragonontestscene-cs.24849/" target="_blank">$TestOnMousedrag_DragonOnTestScene.cs</a></h6>
+						<dl><dt>File size:</dt> <dd>3.7 KB</dd></dl>
+						<dl><dt>Views:</dt> <dd>504</dd></dl>
+					</div>
+				</div>
+			</li>
+		
+	</ul>
+</div>
+
+
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/jeewanthasas.62561/" class="username author" dir="auto">jeewanthasas</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-690375" title="Permalink" class="datePermalink"><span class="DateTime" title="Sep 16, 2011 at 12:21 PM">Sep 16, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-690375" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/690375/permalink">#16</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-690375"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-690649" class="message   " data-author="chubbspet">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/chubbspet.15838/" class="username" dir="auto" itemprop="name">chubbspet</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/chubbspet.15838/" class="avatar Av15838m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/15838.jpg" width="96" height="96" alt="chubbspet"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Feb 18, 2010</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=15838" class="concealed" rel="nofollow">1,193</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I wish I could help, but I have not even solved my problem - i've been ignoring it for the last month doing other stuff<img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie2" alt=";)" title="Wink    ;)">
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/chubbspet.15838/" class="username author" dir="auto">chubbspet</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-690649" title="Permalink" class="datePermalink"><span class="DateTime" title="Sep 16, 2011 at 5:42 PM">Sep 16, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-690649" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/690649/permalink">#17</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-690649"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-692426" class="message   " data-author="jeewanthasas">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/jeewanthasas.62561/" class="username" dir="auto" itemprop="name">jeewanthasas</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/jeewanthasas.62561/" class="avatar Av62561m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/avatar_m.png" width="96" height="96" alt="jeewanthasas"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Sep 8, 2011</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=62561" class="concealed" rel="nofollow">13</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Hi,<br>
+<br>
+Thanks chubbspet, I could solve the issue and if anyone interested in the solution I would love to assist them.<br>
+<br>
+Regards,
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/jeewanthasas.62561/" class="username author" dir="auto">jeewanthasas</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-692426" title="Permalink" class="datePermalink"><span class="DateTime" title="Sep 19, 2011 at 12:00 AM">Sep 19, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-692426" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/692426/permalink">#18</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-692426"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-692536" class="message   " data-author="chubbspet">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/chubbspet.15838/" class="username" dir="auto" itemprop="name">chubbspet</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/chubbspet.15838/" class="avatar Av15838m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/15838.jpg" width="96" height="96" alt="chubbspet"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Feb 18, 2010</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=15838" class="concealed" rel="nofollow">1,193</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I will be very interrested!
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/chubbspet.15838/" class="username author" dir="auto">chubbspet</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-692536" title="Permalink" class="datePermalink"><span class="DateTime" title="Sep 19, 2011 at 5:14 AM">Sep 19, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-692536" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/692536/permalink">#19</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-692536"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-734089" class="message   " data-author="Euro3d">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/euro3d.69670/" class="username" dir="auto" itemprop="name">Euro3d</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/euro3d.69670/" class="avatar Av69670m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/avatar_m.png" width="96" height="96" alt="Euro3d"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Oct 25, 2011</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=69670" class="concealed" rel="nofollow">11</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Hello,<br>
+<br>
+thx for the great spline class, it works great!!<br>
+<br>
+As you mentioned andeeee, the speed along the spline depends on the control points distance. In my scene I using this spline class to generate a camera path. The problem here is that I want to design a constant movement speed along this spline. How do I do this? I tried taking the velocity's magnitude and calculating it with my parameter t:<br>
+<br>
+void Update()<br>
+{<br>
+float magnitude = crSpline.Velocity((speed * Time.time) % 1.0f).magnitude;<br>
+renderingCamera.transform.position = crSpline.Interp((speed * Time.time / magnitude) % 1.0f);<br>
+}<br>
+<br>
+but this does not work, any suggestions guys??
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/euro3d.69670/" class="username author" dir="auto">Euro3d</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-734089" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 4, 2011 at 11:11 AM">Nov 4, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-734089" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/734089/permalink">#20</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-734089"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-734094" class="message   " data-author="chubbspet">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/chubbspet.15838/" class="username" dir="auto" itemprop="name">chubbspet</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/chubbspet.15838/" class="avatar Av15838m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/15838.jpg" width="96" height="96" alt="chubbspet"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Feb 18, 2010</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=15838" class="concealed" rel="nofollow">1,193</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I'm also still looking for a solution for the constant speed issue.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/chubbspet.15838/" class="username author" dir="auto">chubbspet</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-734094" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 4, 2011 at 11:16 AM">Nov 4, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-734094" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/734094/permalink">#21</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-734094"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-734911" class="message   " data-author="TiG">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/tig.36983/" class="username" dir="auto" itemprop="name">TiG</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/tig.36983/" class="avatar Av36983m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/36983.jpg" width="96" height="96" alt="TiG"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Feb 28, 2011</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=36983" class="concealed" rel="nofollow">308</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					While answering to another similar topic, I have noticed this one and realized that constant speed is a problem among many. I believe doing it while controlling the transform.position each frame is easy and can be done by the method <b>hippocoder </b> describes. However doing it with rigidbodies that are controlled with forces is a whole different topic. If anyone wants a tip, search the methods of control engineering. If you want me to solve it for your project, PM me. <br>
+<br>
+This problem of precise control of speed or another variable in a mechanical system is frequently faced by engineers of all sorts, and there are many techniques developed to solve them. Any they can easily be adapted to Unity.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/tig.36983/" class="username author" dir="auto">TiG</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-734911" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 5, 2011 at 1:59 PM">Nov 5, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-734911" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/734911/permalink">#22</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-734911"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-756115" class="message   " data-author="BobBobson108">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/bobbobson108.2634/" class="username" dir="auto" itemprop="name">BobBobson108</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/bobbobson108.2634/" class="avatar Av2634m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/avatar_m.png" width="96" height="96" alt="BobBobson108"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 13, 2008</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=2634" class="concealed" rel="nofollow">51</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Hi all, I was wondering how I could convert this to a Cubic Bezier, so that the path is smoother and does not pass through the points.  I've been to a lot of different places on the web but they all talk about multiplying matrices by the Vector3 and I don't think I know enough to do this on my own (because I keep getting a Vector3 of 0,0,0).  I'm using iTween right now but there's no built in class that allows points to form a Cubic Bezier instead of a Catmull-Rom spline.  Any help and/or links is much appreciated.<br>
+<br>
+Thanks!!<br>
+~Jake
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/bobbobson108.2634/" class="username author" dir="auto">BobBobson108</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-756115" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 30, 2011 at 12:00 AM">Nov 30, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-756115" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/756115/permalink">#23</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-756115"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-756509" class="message   " data-author="andeeeee">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/andeeeee.81/" class="username" dir="auto" itemprop="name">andeeeee</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/andeeeee.81/" class="avatar Av81m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/81.jpg" width="96" height="96" alt="andeeeee"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jul 19, 2005</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=81" class="concealed" rel="nofollow">8,768</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					There are classes for quadratic and cubic Bezier curves in the library I posted. And fear not - no matrices required! ;-)
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/andeeeee.81/" class="username author" dir="auto">andeeeee</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-756509" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 30, 2011 at 11:11 AM">Nov 30, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-756509" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/756509/permalink">#24</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-756509"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-757129" class="message   " data-author="BobBobson108">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/bobbobson108.2634/" class="username" dir="auto" itemprop="name">BobBobson108</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/bobbobson108.2634/" class="avatar Av2634m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/avatar_m.png" width="96" height="96" alt="BobBobson108"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 13, 2008</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=2634" class="concealed" rel="nofollow">51</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Thank you VERY much!! <img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie8" alt=":D" title="Big Grin    :D"> I followed this link from the source code inside iTween, so I don't have the full library I guess <img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie7" alt=":p" title="Stick Out Tongue    :p">  Thanks again!!
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/bobbobson108.2634/" class="username author" dir="auto">BobBobson108</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-757129" title="Permalink" class="datePermalink"><span class="DateTime" title="Dec 1, 2011 at 12:31 AM">Dec 1, 2011</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-757129" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/757129/permalink">#25</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-757129"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-812992" class="message   " data-author="Izitmee">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/izitmee.33703/" class="username" dir="auto" itemprop="name">Izitmee</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/izitmee.33703/" class="avatar Av33703m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/33703.jpg" width="96" height="96" alt="Izitmee"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jan 27, 2011</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=33703" class="concealed" rel="nofollow">3,224</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Hey Andeeee, I just wanted to thank you for the CRSpline class: I'm using it in my tween engine (<a href="http://hotween.holoville.com/" target="_blank" class="externalLink" rel="nofollow">HOTween</a>) and it works perfectly (with some addition to achieve constant speed and such).<br>
+<br>
+And sorry if I'm late: I credited you on the website, but I forgot to come and say thank you here <img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie7" alt=":p" title="Stick Out Tongue    :p">
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/izitmee.33703/" class="username author" dir="auto">Izitmee</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-812992" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 27, 2012 at 2:39 PM">Jan 27, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-812992" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/812992/permalink">#26</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-812992"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-822333" class="message   " data-author="akasurreal">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/akasurreal.8805/" class="username" dir="auto" itemprop="name">akasurreal</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/akasurreal.8805/" class="avatar Av8805m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/8805.jpg" width="96" height="96" alt="akasurreal"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Jul 17, 2009</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=8805" class="concealed" rel="nofollow">438</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					<div class="bbCodeBlock bbCodeQuote" data-author="andeeee">
+	<aside>
+		
+			<div class="attribution type">andeeee said:
+				
+					<a href="https://forum.unity.com/goto/post?id=213942#post-213942" class="AttributionLink">↑</a>
+				
+			</div>
+		
+		<blockquote class="quoteContainer"><div class="quote">I've attached a Bezier/spline library script. It is still not finished, but I think it might help you out here. There's a class defined in it called CRSpline (ie, Catmull-Rom spline).</div><div class="quoteExpand">Click to expand...</div></blockquote>
+	</aside>
+</div>Wow, so glad I found this thread, thanks a ton, this works perfectly for what I needed!
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/akasurreal.8805/" class="username author" dir="auto">akasurreal</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-822333" title="Permalink" class="datePermalink"><span class="DateTime" title="Feb 7, 2012 at 6:40 AM">Feb 7, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-822333" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/822333/permalink">#27</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-822333"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-884878" class="message   " data-author="whydoidoit">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/whydoidoit.95398/" class="username" dir="auto" itemprop="name">whydoidoit</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/whydoidoit.95398/" class="avatar Av95398m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/95398.jpg" width="96" height="96" alt="whydoidoit"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 12, 2012</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=95398" class="concealed" rel="nofollow">367</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					<img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)"> Thanks for the great script Andeeee, I've added a variety of easing in/out functions to it and created a wrapper that uses the Cubic and Quad functions for an array that has less than 5 values). This seems to work pretty well.  <b>I've also added a function to traverse the path at constant speed</b>.<br>
+<br>
+Anyone interested can download my version from my blog, which you can find <a href="http://whydoidoit.com/2012/04/06/unity-curved-path-following-with-easing/" target="_blank" class="externalLink" rel="nofollow">here</a>.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+			<div class="editDate">
+			
+				Last edited: <span class="DateTime" title="Apr 7, 2012 at 4:36 PM">Apr 7, 2012</span>
+			
+			</div>
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/whydoidoit.95398/" class="username author" dir="auto">whydoidoit</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-884878" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 6, 2012 at 2:20 PM">Apr 6, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-884878" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/884878/permalink">#28</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-884878">
+	
+	<div class="likesSummary secondaryContent">
+		<span class="LikeText">
+			<a href="https://forum.unity.com/members/r618.4884/" class="username" dir="auto">r618</a> likes this.
+		</span>
+	</div>
+</div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-885038" class="message   " data-author="yahodahan">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/yahodahan.6790/" class="username" dir="auto" itemprop="name">yahodahan</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/yahodahan.6790/" class="avatar Av6790m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/6790.jpg" width="96" height="96" alt="yahodahan"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Apr 26, 2009</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=6790" class="concealed" rel="nofollow">1,337</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Hi Whydoidoit, thanks for the great update! I am a little confused though, trying to get it to work- do I need to use a C# script to access it? Or can I do so simply from Javascript? In your example you show: "Spline.Interp(myPathObject.GetComponentsInChildren&lt;Transform&gt;(), time);"<br>
+<br>
+I am not familiar with the "&lt;Transform&gt;()", though I assume it is the same as "(Transform)" in JS?<br>
+<br>
+Would you mind giving more examples of how to use this? Thank you much!
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/yahodahan.6790/" class="username author" dir="auto">yahodahan</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885038" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 6, 2012 at 5:58 PM">Apr 6, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885038" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/885038/permalink">#29</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-885038"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-885150" class="message   " data-author="whydoidoit">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/whydoidoit.95398/" class="username" dir="auto" itemprop="name">whydoidoit</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/whydoidoit.95398/" class="avatar Av95398m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/95398.jpg" width="96" height="96" alt="whydoidoit"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 12, 2012</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=95398" class="concealed" rel="nofollow">367</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Hi there, firstly, sorry the initial version got uploaded from an old project by accident and didn't work!<br>
+<br>
+Next, so long as the package is installed under Plugins (it is by default) you can use it from JavaScript.  The following script will follow a path taking 20 seconds to do so.<br>
+<br>
+#pragma strict<br>
+<br>
+var pathPoints : Transform[];<br>
+<br>
+var t : float;<br>
+<br>
+function Update () {<br>
+	transform.position = Spline.InterpConstantSpeed(pathPoints, t, EasingType.Sine, true, true);<br>
+	t += Time.deltaTime/20;<br>
+}
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/whydoidoit.95398/" class="username author" dir="auto">whydoidoit</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885150" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 6, 2012 at 8:15 PM">Apr 6, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885150" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/885150/permalink">#30</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-885150"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-885151" class="message   " data-author="whydoidoit">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/whydoidoit.95398/" class="username" dir="auto" itemprop="name">whydoidoit</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/whydoidoit.95398/" class="avatar Av95398m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/95398.jpg" width="96" height="96" alt="whydoidoit"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 12, 2012</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=95398" class="concealed" rel="nofollow">367</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					It's fixed now
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/whydoidoit.95398/" class="username author" dir="auto">whydoidoit</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885151" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 6, 2012 at 8:16 PM">Apr 6, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885151" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/885151/permalink">#31</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-885151"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-885166" class="message   " data-author="whydoidoit">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/whydoidoit.95398/" class="username" dir="auto" itemprop="name">whydoidoit</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/whydoidoit.95398/" class="avatar Av95398m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/95398.jpg" width="96" height="96" alt="whydoidoit"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 12, 2012</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=95398" class="concealed" rel="nofollow">367</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					I've also added my function that enables a path to be followed using a maximum speed that enables a different kind of constant speed path and added extra documentation that includes Javascript.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+			<div class="editDate">
+			
+				Last edited: <span class="DateTime" title="Apr 7, 2012 at 12:40 PM">Apr 7, 2012</span>
+			
+			</div>
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/whydoidoit.95398/" class="username author" dir="auto">whydoidoit</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885166" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 6, 2012 at 8:38 PM">Apr 6, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885166" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/885166/permalink">#32</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-885166"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-885172" class="message   " data-author="yahodahan">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/yahodahan.6790/" class="username" dir="auto" itemprop="name">yahodahan</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/yahodahan.6790/" class="avatar Av6790m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/6790.jpg" width="96" height="96" alt="yahodahan"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Apr 26, 2009</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=6790" class="concealed" rel="nofollow">1,337</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Thanks much!<br>
+<br>
+This is really going to be a great help <img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)">
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/yahodahan.6790/" class="username author" dir="auto">yahodahan</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885172" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 6, 2012 at 8:49 PM">Apr 6, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885172" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/885172/permalink">#33</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-885172"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-885329" class="message   " data-author="yahodahan">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/yahodahan.6790/" class="username" dir="auto" itemprop="name">yahodahan</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/yahodahan.6790/" class="avatar Av6790m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/6790.jpg" width="96" height="96" alt="yahodahan"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Apr 26, 2009</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=6790" class="concealed" rel="nofollow">1,337</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Just noticed, when using the "Spline.MoveOnPath" method, when the object reaches the final waypoint, it sends Unity into a non-recoverable loop. Yoiks! Definitely fixable from the end-user's point, but maybe easier to do from within the C# file?<br>
+<br>
+Thanks again!
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/yahodahan.6790/" class="username author" dir="auto">yahodahan</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885329" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 7, 2012 at 12:57 AM">Apr 7, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885329" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/885329/permalink">#34</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-885329"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-885461" class="message   " data-author="geno">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/geno.95170/" class="username" dir="auto" itemprop="name">geno</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/geno.95170/" class="avatar Av95170m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/95170.jpg" width="96" height="96" alt="geno"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 11, 2012</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=95170" class="concealed" rel="nofollow">18</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Thanks for sharing this, Whydoidoit!<br>
+Just FYI: the examples on your blog post seems to be outdated concerning the given number of parameters a function requires now.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/geno.95170/" class="username author" dir="auto">geno</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885461" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 7, 2012 at 7:14 AM">Apr 7, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885461" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/885461/permalink">#35</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-885461"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-885567" class="message   " data-author="whydoidoit">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/whydoidoit.95398/" class="username" dir="auto" itemprop="name">whydoidoit</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/whydoidoit.95398/" class="avatar Av95398m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/95398.jpg" width="96" height="96" alt="whydoidoit"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 12, 2012</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=95398" class="concealed" rel="nofollow">367</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					<div class="bbCodeBlock bbCodeQuote" data-author="yahodahan">
+	<aside>
+		
+			<div class="attribution type">yahodahan said:
+				
+					<a href="https://forum.unity.com/goto/post?id=885329#post-885329" class="AttributionLink">↑</a>
+				
+			</div>
+		
+		<blockquote class="quoteContainer"><div class="quote">Just noticed, when using the "Spline.MoveOnPath" method, when the object reaches the final waypoint, it sends Unity into a non-recoverable loop. Yoiks! Definitely fixable from the end-user's point, but maybe easier to do from within the C# file?<br>
+<br>
+Thanks again!</div><div class="quoteExpand">Click to expand...</div></blockquote>
+	</aside>
+</div>Oops, serves me right for trying to pull code out of one project into another.  Think that's fixed now.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/whydoidoit.95398/" class="username author" dir="auto">whydoidoit</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885567" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 7, 2012 at 12:34 PM">Apr 7, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885567" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/885567/permalink">#36</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-885567"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-885568" class="message   " data-author="whydoidoit">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/whydoidoit.95398/" class="username" dir="auto" itemprop="name">whydoidoit</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/whydoidoit.95398/" class="avatar Av95398m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/95398.jpg" width="96" height="96" alt="whydoidoit"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Mar 12, 2012</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=95398" class="concealed" rel="nofollow">367</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					<div class="bbCodeBlock bbCodeQuote" data-author="geno">
+	<aside>
+		
+			<div class="attribution type">geno said:
+				
+					<a href="https://forum.unity.com/goto/post?id=885461#post-885461" class="AttributionLink">↑</a>
+				
+			</div>
+		
+		<blockquote class="quoteContainer"><div class="quote">Thanks for sharing this, Whydoidoit!<br>
+Just FYI: the examples on your blog post seems to be outdated concerning the given number of parameters a function requires now.</div><div class="quoteExpand">Click to expand...</div></blockquote>
+	</aside>
+</div>I think the documentation is up to date.  Most of the routines have lots of optional parameters.  The odd one is MoveOnPath which has two versions, and optional parameters <img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/clear.png" class="mceSmilieSprite mceSmilie2" alt=";)" title="Wink    ;)">  I wrote that doc recently looking at the code so I hope it's right!  The examples certainly all work in my test project...  I know MonoDevelop tends not to indicate which parameters have default values - I have a tendency to make most parameters take sensible defaults (so for instance the default easing type is Linear - i.e. no easing at all). So for example you can still call Interp or InterpConstantSpeed with two parameters - the rest have sensible defaults.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+			<div class="editDate">
+			
+				Last edited: <span class="DateTime" title="Apr 7, 2012 at 12:44 PM">Apr 7, 2012</span>
+			
+			</div>
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/whydoidoit.95398/" class="username author" dir="auto">whydoidoit</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885568" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 7, 2012 at 12:37 PM">Apr 7, 2012</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-885568" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/885568/permalink">#37</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-885568"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-1602964" class="message   " data-author="huogeCarlos">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/huogecarlos.611807/" class="username" dir="auto" itemprop="name">huogeCarlos</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/huogecarlos.611807/" class="avatar Av611807m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/avatar_m.png" width="96" height="96" alt="huogeCarlos"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Apr 23, 2014</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=611807" class="concealed" rel="nofollow">1</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					Thank you for andeeeee 's help .But i still have a problem.How can i get the small point(every small point on the path) corresponding time? or the big point(created by myself as the path Node) corresponding time? Similar as the Fuction PointOnPath() ,can it Get back the point corresponding  time?
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/huogecarlos.611807/" class="username author" dir="auto">huogeCarlos</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-1602964" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 23, 2014 at 8:41 AM">Apr 23, 2014</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-1602964" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/1602964/permalink">#38</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-1602964"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-1844905" class="message   " data-author="afvbmp">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/afvbmp.685474/" class="username" dir="auto" itemprop="name">afvbmp</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/afvbmp.685474/" class="avatar Av685474m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/avatar_m.png" width="96" height="96" alt="afvbmp"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Sep 10, 2014</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=685474" class="concealed" rel="nofollow">1</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					excellent,This is really going to be a great help
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/afvbmp.685474/" class="username author" dir="auto">afvbmp</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-1844905" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 12, 2014 at 2:13 AM">Nov 12, 2014</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-1844905" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/1844905/permalink">#39</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-1844905"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+			
+				
+
+
+<li id="post-1845078" class="message   " data-author="Gooseman_1977">
+
+	
+
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">	
+<div class="messageUserBlock ">
+<h3 class="userText">
+	<a href="https://forum.unity.com/members/gooseman_1977.381505/" class="username" dir="auto" itemprop="name">Gooseman_1977</a>
+</h3>
+	
+		<div class="avatarHolder">
+			<span class="helper"></span>
+			<a href="https://forum.unity.com/members/gooseman_1977.381505/" class="avatar Av381505m" data-avatarhtml="true"><img src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/381505.jpg" width="96" height="96" alt="Gooseman_1977"></a>
+			
+			<!-- slot: message_user_info_avatar -->
+		</div>
+	
+
+
+	
+		<h3 class="userText">
+		
+			
+			
+			<!-- slot: message_user_info_text -->
+		</h3>
+	
+		
+	
+		<div class="extraUserInfo">
+			
+			
+				
+					<dl class="pairsJustified">
+						<dt>Joined:</dt>
+						<dd>Aug 15, 2013</dd>
+					</dl>
+				
+				
+				
+					<dl class="pairsJustified">
+						<dt>Posts:</dt>
+						<dd><a href="https://forum.unity.com/search/member?user_id=381505" class="concealed" rel="nofollow">85</a></dd>
+					</dl>
+				
+				
+				
+				
+				
+			
+				
+				
+				
+				
+				
+			
+				
+							
+						
+			
+			
+		</div>
+	
+		
+
+
+	<span class="arrow"><span></span></span>
+</div>
+</div>
+
+	<div class="messageInfo primaryContent">
+		
+		
+		
+		
+		
+		<div class="messageContent">		
+			<article>
+				<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+					
+					If you are feeling rich, you should check out this plugin.<br>
+<a href="https://www.assetstore.unity3d.com/en/#!/content/2506" target="_blank" class="externalLink" rel="nofollow">https://www.assetstore.unity3d.com/en/#!/content/2506</a><br>
+<br>
+It has a wonderful waypoint/spline functionality and comes with full source code. I picked it up and was able to make modifications to it quite easily for my racing game.
+					<div class="messageTextEndMarker">&nbsp;</div>
+				</blockquote>
+			</article>
+			
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+				
+		<div class="messageMeta ToggleTriggerAnchor">
+			
+			<div class="privateControls">
+				
+				<span class="item muted">
+					<span class="authorEnd"><a href="https://forum.unity.com/members/gooseman_1977.381505/" class="username author" dir="auto">Gooseman_1977</a>,</span>
+					<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-1845078" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 12, 2014 at 6:59 AM">Nov 12, 2014</span></a>
+				</span>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			
+			<div class="publicControls">
+				<a href="https://forum.unity.com/threads/waypoints-and-constant-variable-speed-problems.32954/#post-1845078" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="posts/1845078/permalink">#40</a>
+				
+				
+				
+				
+			</div>
+		</div>
+	
+		
+		<div id="likes-post-1845078"></div>
+	</div>
+
+	
+	
+	
+	
+</li>
+			
+		
+		
+	</ol>
+
+	
+
+	<input type="hidden" name="_xfToken" value="">
+
+</form>
+
+	<div class="pageNavLinkGroup">
+			
+				<div class="linkGroup">
+					
+						<label for="LoginControl"><a href="https://forum.unity.com/login/" class="concealed element">(You must log in or sign up to reply here.)</a></label>
+					
+				</div>
+			
+			<div class="linkGroup" style="display: none"><a href="javascript:" class="muted JsOnly DisplayIgnoredContent Tooltip">Show Ignored Content</a></div>
+
+			
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+						
+						
+						
+						
+							<!-- login form, to be moved to the upper drop-down -->
+							
+
+
+
+
+
+
+
+<form action="https://forum.unity.com/login/login" method="post" class="xenForm eAuth" id="login" style="display:none">
+
+	
+
+	<div class="ctrlWrapper">
+		<dl class="ctrlUnit">
+			<dt><label for="LoginControl">Your name or email address:</label></dt>
+			<dd><input type="text" name="login" id="LoginControl" class="textCtrl" tabindex="101"></dd>
+		</dl>
+	
+	
+		<dl class="ctrlUnit">
+			<dt>
+				<label for="ctrl_password">Password:</label>
+			</dt>
+			<dd>
+				<input type="password" name="password" class="textCtrl" id="ctrl_password" tabindex="102">
+				<div class="lostPasswordLogin"><a href="https://forum.unity.com/lost-password/" class="OverlayTrigger OverlayCloser" tabindex="106">Forgot your password?</a></div>
+			</dd>
+		</dl>
+	
+		
+		<dl class="ctrlUnit submitUnit">
+			<dt></dt>
+			<dd>
+				<input type="submit" class="button primary" value="Log in" tabindex="104" data-loginphrase="Log in" data-signupphrase="Sign up">
+				<label for="ctrl_remember" class="rememberPassword"><input type="checkbox" name="remember" value="1" id="ctrl_remember" tabindex="103"> Stay logged in</label>
+			</dd>
+		</dl>
+	</div>
+
+	<input type="hidden" name="cookie_check" value="1">
+	<input type="hidden" name="redirect" value="/threads/waypoints-and-constant-variable-speed-problems.32954/">
+	<input type="hidden" name="_xfToken" value="">
+
+</form>
+						
+						
+					
+			
+
+						
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+	<footer class="main-footer">
+  <div class="wrapper clear gr-lg-rev">
+    <div class="gw clear">
+      <div class="g12 crumbs pb0">
+        <div class="rel">
+          <a href="https://unity3d.com/" class="unity-logo"></a>
+          <a class="to-top"></a>
+        </div>
+      </div>
+      <div class="g8 nest group links">
+        <div class="g3">
+          <p class="lbl">Purchase</p>
+          <ul>
+            <li><a href="https://store.unity.com/">Subscription</a></li>
+            <li><a href="https://unity3d.com/asset-store">Asset Store</a></li>
+            <li><a href="https://store.unity.com/resellers">Resellers</a></li>
+          </ul>
+          <p class="lbl pt25">Education</p>
+          <ul>
+            <li><a href="https://store.unity.com/education#student">Students</a></li>
+            <li><a href="https://store.unity.com/education#educator">Educators</a></li>
+          </ul>
+        </div>
+        <div class="g3">
+          <p class="lbl">Download</p>
+          <ul>
+            <li><a href="https://unity3d.com/get-unity">Unity</a></li>
+            <li><a href="https://unity3d.com/unity/beta">Beta Program</a></li>
+                        <li><a href="https://unity3d.com/public-relations/downloads">Press material</a></li>
+            <li><a href="https://unity3d.com/whitepapers">Whitepapers</a></li>
+                      </ul>
+
+					<p class="lbl pt25">Labs</p>
+          <ul>
+            <li><a href="http://research.unity3d.com/">Research</a></li>
+					</ul>
+
+        </div>
+        <div class="g3">
+          <p class="lbl">Resources</p>
+          <ul>
+                        <li><a href="https://unity3d.com/learn">Learn</a></li>
+            <li><a href="https://unity3d.com/community">Community</a></li>
+            <li><a href="https://unity3d.com/learn/documentation">Documentation</a></li>
+            <li><a href="https://unity3d.com/unity/qa">Unity QA</a></li>
+            <li><a href="https://unity3d.com/unity/faq">FAQ</a></li>
+            <li><a href="http://status.cloud.unity3d.com/" target="_blank">Services Status</a></li>
+            <li><a href="https://certification.unity.com/">Certification</a></li>
+            <li><a href="https://connect.unity.com/">Connect</a></li>
+						<li><a href="https://unity3d.com/user-research">User research</a></li>
+          </ul>
+        </div>
+        <div class="g3">
+          <p class="lbl">About Unity</p>
+          <ul>
+            <li><a href="https://unity3d.com/public-relations">Company facts</a></li>
+                        <li><a href="http://blogs.unity3d.com/">Blog</a></li>
+            <li><a href="https://unity3d.com/events">Events</a></li>
+                        <li><a href="https://careers.unity.com/">Careers</a></li>
+                        <li><a href="https://unity3d.com/public-relations">Press</a></li>
+            <li><a href="https://unity3d.com/contact">Contact</a></li>
+                        <li><a href="https://unity3d.com/partners">Partners</a></li>
+            <li><a href="https://unity3d.com/affiliates">Affiliates</a></li>
+						<li><a href="https://unity3d.com/security">Security</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="g4 group nest">
+        <div class="g12 newsletter pb0">
+          <form method="post" action="https://unity3d.com/newsletters/list" id="newsletter-signup" class="newsletter-signup rel">
+  <div class="fields clear">
+          <p class="lbl">Get Unity news</p>
+        <div class="rel">
+      <div class="field rel clear">
+        <input type="email" name="email" id="email" value="" class="email mb15" placeholder="Enter your email here...">
+        <input type="submit" value="Sign up" class="btn bg-dg">
+      </div>
+      <div class="checkbox clear">
+        <input type="checkbox" id="agree">
+        <label for="agree">I agree to the <a href="https://unity3d.com/company/legal/privacy-policy" target="_blank">Unity Privacy Policy</a> and the processing and use of my information</label>
+      </div>
+      <div class="loading rel hide">
+        <div class="loading-inline"></div>
+      </div>
+      <div class="success hide">
+        <h4 class="mb5 c-gr">Nearly there...</h4>
+        <p>To start receiving news from Unity Technologies, click on the link we've sent to your e-mail account.</p>
+      </div>
+      <div class="failed hide">
+        <h4 class="mb5 c-re">Oops...</h4>
+        <p>Something went wrong, please try again.</p>
+      </div>
+    </div>
+  </div>
+</form>        </div>
+        <div class="g12 lang pb0">
+          <p class="lbl">Language</p>
+          <div class="language-switcher">
+  <ul id="mobile-lang" class="languages">
+              <li><a href="https://forum.unity.com/cn" data-lang="cn" lang="zh-hans" hreflang="zh-hans">中文</a></li>
+                <li><a href="https://forum.unity.com/fr" data-lang="fr" lang="fr" hreflang="fr">Français</a></li>
+                <li><a href="https://forum.unity.com/de" data-lang="de" lang="de" hreflang="de">Deutsch</a></li>
+                <li><a href="https://forum.unity.com/jp" data-lang="jp" lang="ja" hreflang="ja">日本語</a></li>
+                <li><a href="https://forum.unity.com/kr" data-lang="kr" lang="ko" hreflang="ko">한국어</a></li>
+                <li><a href="https://forum.unity.com/pt" data-lang="pt" lang="pt" hreflang="pt">Português</a></li>
+                <li><a href="https://forum.unity.com/ru" data-lang="ru" lang="ru" hreflang="ru">Русский</a></li>
+                <li><a href="https://forum.unity.com/es" data-lang="es" lang="es" hreflang="es">Español</a></li>
+      </ul>
+</div>        </div>
+      </div>
+      <div class="g12 partners">
+        <p class="lbl">Partners</p>
+        <div class="partner moolah"><a href="https://unity3d.com/partners/cloudmoolah" target="_blank"></a></div>
+        <div class="partner facebook"><a href="https://unity3d.com/partners/facebook/gameroom"></a></div>
+        <div class="partner google"><a href="https://unity3d.com/partners/google/daydream"></a></div>
+        <div class="partner intel"><a href="https://unity3d.com/partners/intel"></a></div>
+        <div class="partner microsoft"><a href="https://unity3d.com/partners/microsoft"></a></div>
+        <div class="partner nintendo"><a href="http://www.nintendo.com/" target="_blank"></a></div>
+        <div class="partner oculus"><a href="http://www.oculus.com/" target="_blank"></a></div>
+        <div class="partner samsung"><a href="https://unity3d.com/partners/samsung"></a></div>
+        <div class="partner sony"><a href="http://www.sony.com/" target="_blank"></a></div>
+        <div class="partner vuforia"><a href="https://unity3d.com/partners/vuforia" target="_blank"></a></div>
+        <div class="partner xiaomi"><a href="https://unity3d.com/partners/xiaomi" target="_blank"></a></div>
+      </div>
+      <div class="g12 nest">
+        <div class="g12 pt0 pb0"><div class="bb"></div></div>
+        <div class="g5 right">
+          <div class="social">
+            <a href="http://www.facebook.com/unity3d" class="icon facebook" target="_blank">Facebook</a>
+            <a href="http://www.twitter.com/unity3d" class="icon twitter" target="_blank">Twitter</a>
+            <a href="https://plus.google.com/u/0/104568650392955941577/" class="icon googleplus" target="_blank">Google+</a>
+            <a href="https://www.linkedin.com/company/unity-technologies" class="icon linkedin" target="_blank">LinkedIn</a>
+            <a href="https://www.youtube.com/user/Unity3D" class="icon youtube" target="_blank">YouTube</a>
+          </div>
+        </div>
+        <div class="g7">
+          <small>© 2017 Unity Technologies</small>
+          <ul class="legal">
+            <li><a href="https://unity3d.com/legal">Legal</a></li>
+            <li><a href="https://unity3d.com/legal/privacy-policy">Privacy Policy</a></li>
+            <li><a href="https://unity3d.com/legal/cookie-policy#cookies">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+</section>
+</div>
+</div>
+</div>
+
+<div class="overlay" style="-webkit-user-select: none; -webkit-user-drag: none; display: none; height: 2840px;"></div>
+<script>
+
+
+jQuery.extend(true, XenForo,
+{
+	visitor: { user_id: 0 },
+	serverTimeInfo:
+	{
+		now: 1506741781,
+		today: 1506726000,
+		todayDow: 6
+	},
+	_lightBoxUniversal: "0",
+	_enableOverlays: "1",
+	_animationSpeedMultiplier: "1",
+	_overlayConfig:
+	{
+		top: "10%",
+		speed: 200,
+		closeSpeed: 100,
+		mask:
+		{
+			color: "rgb(255, 255, 255)",
+			opacity: "0.6",
+			loadSpeed: 200,
+			closeSpeed: 100
+		}
+	},
+	_ignoredUsers: [],
+	_loadedScripts: {"thread_view":true,"message":true,"bb_code":true,"message_user_info":true,"likes_summary":true,"attached_files":true,"notices":true,"panel_scroller":true},
+	_cookieConfig: { path: "/", domain: "", prefix: "xf_"},
+	_csrfToken: "",
+	_csrfRefreshUrl: "login/csrf-token-refresh",
+	_jsVersion: "dc8b3bca",
+	_noRtnProtect: false,
+	_noSocialLogin: false
+});
+jQuery.extend(XenForo.phrases,
+{
+	cancel: "Cancel",
+
+	a_moment_ago:    "A moment ago",
+	one_minute_ago:  "1 minute ago",
+	x_minutes_ago:   "%minutes% minutes ago",
+	today_at_x:      "Today at %time%",
+	yesterday_at_x:  "Yesterday at %time%",
+	day_x_at_time_y: "%day% at %time%",
+
+	day0: "Sunday",
+	day1: "Monday",
+	day2: "Tuesday",
+	day3: "Wednesday",
+	day4: "Thursday",
+	day5: "Friday",
+	day6: "Saturday",
+
+	_months: "January,February,March,April,May,June,July,August,September,October,November,December",
+	_daysShort: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+
+	following_error_occurred: "The following error occurred",
+	server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+	logging_in: "Logging in",
+	click_image_show_full_size_version: "Click this image to show the full-size version.",
+	show_hidden_content_by_x: "Show hidden content by {names}"
+});
+
+// Facebook Javascript SDK
+XenForo.Facebook.appId = "";
+XenForo.Facebook.forceInit = false;
+
+
+</script>
+
+
+
+
+
+
+<div class="Menu JsOnly blockLinksList primaryContent" id="NavigationHiddenMenu"></div><script type="text/javascript" id="">var _elqQ=_elqQ||[];_elqQ.push(["elqSetSiteId","795651218"]);_elqQ.push(["elqUseFirstPartyCookie","eloqua-tracking.unity3d.com"]);_elqQ.push(["elqTrackPageView"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//img06.en25.com/i/elqCfg.min.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script>
+
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1062735023749175");fbq("set","agent","tmgoogletagmanager","1062735023749175");fbq("track","PageView");</script>
+
+<script type="text/javascript" id="">(function(a,c,e,f,d,b){a.hj=a.hj||function(){(a.hj.q=a.hj.q||[]).push(arguments)};a._hjSettings={hjid:632820,hjsv:5};d=c.getElementsByTagName("head")[0];b=c.createElement("script");b.async=1;b.src=e+a._hjSettings.hjid+f+a._hjSettings.hjsv;d.appendChild(b)})(window,document,"//static.hotjar.com/c/hotjar-",".js?sv\x3d");</script><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 540px; display: none; top: 234px; position: absolute; left: 1970px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./Waypoints and constant_variable speed problems_ _ Unity Community_files/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="ads"></div><div class="xenTooltip bbCodeImageTip" style="display: none;">Click this image to show the full-size version.</div><div class="xenTooltip bbCodeImageTip" style="display: none;">Click this image to show the full-size version.</div><div class="xenTooltip bbCodeImageTip" style="display: none;">Click this image to show the full-size version.</div></body></html>
