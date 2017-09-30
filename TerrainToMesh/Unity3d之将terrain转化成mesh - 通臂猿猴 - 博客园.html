@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://www.cnblogs.com/jietian331/p/5831062.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/bundle-Dark.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/bundle-Dark-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/jietian331/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/jietian331/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/jietian331/wlwmanifest.xml">
+<script type="text/javascript" src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/encoder.js.下载"></script><script src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/jquery.js.下载" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'jietian331', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<table width="100%" cellspacing="0" cellpadding="5" border="0">
+<tbody><tr>
+<td class="banner" height="100">
+
+<div id="header">
+	<span>
+		<a id="Header1_HeaderTitle" href="http://www.cnblogs.com/jietian331/">孤独の巡礼</a><br>
+		<div class="sub"></div>
+	</span>
+</div>
+</td>
+</tr>
+<tr>
+<td style="padding-left: 5px" height="35">
+<div style="border: solid 4px #333333; padding: 0px">
+<div style="border: solid 1px #666666; padding: 5px">
+<a id="blog_nav_sitehome" class="listitem" href="http://www.cnblogs.com/">博客园</a> | 
+<a id="blog_nav_myhome" class="listitem" href="http://www.cnblogs.com/jietian331/">首页</a> | 
+<a id="blog_nav_newpost" class="listitem" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">发新随笔</a> | 
+<a id="MyLinks1_NewArticleLink" class="listitem" href="http://www.cnblogs.com/EnterMyBlog.aspx?NewArticle=1">发新文章</a> | 
+<a id="blog_nav_contact" accesskey="9" class="listitem" rel="nofollow" href="https://msg.cnblogs.com/send/%E9%80%9A%E8%87%82%E7%8C%BF%E7%8C%B4">联系</a> | 
+<a id="blog_nav_rss" class="listitem" href="http://www.cnblogs.com/jietian331/rss">订阅</a> <a id="blog_nav_rss_image" href="http://www.cnblogs.com/jietian331/rss"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/xml.gif" alt="订阅"></a> | 
+<a id="blog_nav_admin" class="listitem" rel="nofollow" href="https://i.cnblogs.com/">管理</a>
+
+<div id="blog_stats"><div id="blog_stats">
+随笔：85
+文章：2
+评论：2
+引用：0</div></div>
+</div>
+</div>
+</td>
+</tr>
+</tbody></table>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td valign="top" style="padding: 0">
+<table align="center" width="100%" height="1400" cellspacing="0" cellpadding="5" border="0" class="index">
+<tbody><tr>
+<td class="banner" valign="top">
+
+<div id="post_detail">
+<div class="block">
+	<h1 class="block_title"><a id="cb_post_title_url" href="http://www.cnblogs.com/jietian331/p/5831062.html">Unity3d之将terrain转化成mesh</a></h1>
+	<div class="post">
+		<div class="postcontent">
+			<div id="cnblogs_post_body"><p>Unity3d中，terrain还是比较耗的，为了优化性能，可能需要将terrain转化成mesh。</p>
+<p>现提供一工具，思路是根据terrain高度图生成mesh等。</p>
+<p>可参考：&nbsp;<a title="http://wiki.unity3d.com/index.php?title=TerrainObjExporter" href="http://wiki.unity3d.com/index.php?title=TerrainObjExporter" target="_blank">http://wiki.unity3d.com/index.php?title=TerrainObjExporter</a></p>
+<p>转载请注明出处：</p>
+<p>&nbsp;<a title="http://www.cnblogs.com/jietian331/p/5831062.html" href="http://www.cnblogs.com/jietian331/p/5831062.html" target="_blank">http://www.cnblogs.com/jietian331/p/5831062.html</a></p>
+<p>&nbsp;</p>
+<p>代码如下：</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show(&#39;df55ae12-40bc-45d1-b599-961893143c12&#39;)"><img id="code_img_closed_df55ae12-40bc-45d1-b599-961893143c12" class="code_img_closed" src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/ContractedBlock.gif" alt="" style="display: none;"><img id="code_img_opened_df55ae12-40bc-45d1-b599-961893143c12" class="code_img_opened" style="" onclick="cnblogs_code_hide(&#39;df55ae12-40bc-45d1-b599-961893143c12&#39;,event)" src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_df55ae12-40bc-45d1-b599-961893143c12" class="cnblogs_code_hide" style="display: block;"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008080;">  1</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> UnityEditor;
+</span><span style="color: #008080;">  2</span> <span style="color: #0000ff;">using</span><span style="color: #000000;"> UnityEngine;
+</span><span style="color: #008080;">  3</span> 
+<span style="color: #008080;">  4</span> <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> TerrainToMeshConverter : ScriptableObject
+</span><span style="color: #008080;">  5</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">  6</span>     [MenuItem(<span style="color: #800000;">"</span><span style="color: #800000;">Custom/Convert terrain to mesh</span><span style="color: #800000;">"</span><span style="color: #000000;">)]
+</span><span style="color: #008080;">  7</span>     <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> Init()
+</span><span style="color: #008080;">  8</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">  9</span>         <span style="color: #0000ff;">if</span> (Selection.objects.Length &lt;= <span style="color: #800080;">0</span><span style="color: #000000;">)
+</span><span style="color: #008080;"> 10</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 11</span>             Debug.Log(<span style="color: #800000;">"</span><span style="color: #800000;">Selection.objects.Length &lt;= 0</span><span style="color: #800000;">"</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 12</span>             <span style="color: #0000ff;">return</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 13</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 14</span> 
+<span style="color: #008080;"> 15</span>         <span style="color: #0000ff;">var</span> terrainObj = Selection.objects[<span style="color: #800080;">0</span>] <span style="color: #0000ff;">as</span><span style="color: #000000;"> GameObject;
+</span><span style="color: #008080;"> 16</span>         <span style="color: #0000ff;">if</span> (terrainObj == <span style="color: #0000ff;">null</span><span style="color: #000000;">)
+</span><span style="color: #008080;"> 17</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 18</span>             Debug.Log(<span style="color: #800000;">"</span><span style="color: #800000;">terrainObj == null</span><span style="color: #800000;">"</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 19</span>             <span style="color: #0000ff;">return</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 20</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 21</span> 
+<span style="color: #008080;"> 22</span>         <span style="color: #0000ff;">var</span> terrain = terrainObj.GetComponent&lt;Terrain&gt;<span style="color: #000000;">();
+</span><span style="color: #008080;"> 23</span>         <span style="color: #0000ff;">if</span> (terrain == <span style="color: #0000ff;">null</span><span style="color: #000000;">)
+</span><span style="color: #008080;"> 24</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 25</span>             Debug.Log(<span style="color: #800000;">"</span><span style="color: #800000;">terrain == null</span><span style="color: #800000;">"</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 26</span>             <span style="color: #0000ff;">return</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 27</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 28</span> 
+<span style="color: #008080;"> 29</span>         <span style="color: #0000ff;">var</span> terrainData =<span style="color: #000000;"> terrain.terrainData;
+</span><span style="color: #008080;"> 30</span>         <span style="color: #0000ff;">if</span> (terrainData == <span style="color: #0000ff;">null</span><span style="color: #000000;">)
+</span><span style="color: #008080;"> 31</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 32</span>             Debug.Log(<span style="color: #800000;">"</span><span style="color: #800000;">terrainData == null</span><span style="color: #800000;">"</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 33</span>             <span style="color: #0000ff;">return</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 34</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 35</span> 
+<span style="color: #008080;"> 36</span>         <span style="color: #0000ff;">int</span> vertexCountScale = <span style="color: #800080;">4</span>;       <span style="color: #008000;">//</span><span style="color: #008000;"> [dev] 将顶点数稀释 vertexCountScale*vertexCountScale 倍</span>
+<span style="color: #008080;"> 37</span>         <span style="color: #0000ff;">int</span> w =<span style="color: #000000;"> terrainData.heightmapWidth;
+</span><span style="color: #008080;"> 38</span>         <span style="color: #0000ff;">int</span> h =<span style="color: #000000;"> terrainData.heightmapHeight;
+</span><span style="color: #008080;"> 39</span>         Vector3 size =<span style="color: #000000;"> terrainData.size;
+</span><span style="color: #008080;"> 40</span>         <span style="color: #0000ff;">float</span>[, ,] alphaMapData = terrainData.GetAlphamaps(<span style="color: #800080;">0</span>, <span style="color: #800080;">0</span><span style="color: #000000;">, terrainData.alphamapWidth, terrainData.alphamapHeight);
+</span><span style="color: #008080;"> 41</span>         Vector3 meshScale = <span style="color: #0000ff;">new</span> Vector3(size.x / (w - 1f) * vertexCountScale, <span style="color: #800080;">1</span>, size.z / (h - 1f) *<span style="color: #000000;"> vertexCountScale);
+</span><span style="color: #008080;"> 42</span>         Vector2 uvScale = <span style="color: #0000ff;">new</span> Vector2(1f / (w - 1f), 1f / (h - 1f)) * vertexCountScale * (size.x / terrainData.splatPrototypes[<span style="color: #800080;">0</span>].tileSize.x);     <span style="color: #008000;">//</span><span style="color: #008000;"> [dev] 此处有问题，若每个图片大小不一，则出问题。日后改善</span>
+<span style="color: #008080;"> 43</span> 
+<span style="color: #008080;"> 44</span>         w = (w - <span style="color: #800080;">1</span>) / vertexCountScale + <span style="color: #800080;">1</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 45</span>         h = (h - <span style="color: #800080;">1</span>) / vertexCountScale + <span style="color: #800080;">1</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 46</span>         Vector3[] vertices = <span style="color: #0000ff;">new</span> Vector3[w *<span style="color: #000000;"> h];
+</span><span style="color: #008080;"> 47</span>         Vector2[] uvs = <span style="color: #0000ff;">new</span> Vector2[w *<span style="color: #000000;"> h];
+</span><span style="color: #008080;"> 48</span>         Vector4[] alphasWeight = <span style="color: #0000ff;">new</span> Vector4[w * h];            <span style="color: #008000;">//</span><span style="color: #008000;"> [dev] 只支持4张图片
+</span><span style="color: #008080;"> 49</span> 
+<span style="color: #008080;"> 50</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 顶点，uv，每个顶点每个图片所占比重</span>
+<span style="color: #008080;"> 51</span>         <span style="color: #0000ff;">for</span> (<span style="color: #0000ff;">int</span> i = <span style="color: #800080;">0</span>; i &lt; w; i++<span style="color: #000000;">)
+</span><span style="color: #008080;"> 52</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 53</span>             <span style="color: #0000ff;">for</span> (<span style="color: #0000ff;">int</span> j = <span style="color: #800080;">0</span>; j &lt; h; j++<span style="color: #000000;">)
+</span><span style="color: #008080;"> 54</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;"> 55</span>                 <span style="color: #0000ff;">int</span> index = j * w +<span style="color: #000000;"> i;
+</span><span style="color: #008080;"> 56</span>                 <span style="color: #0000ff;">float</span> z = terrainData.GetHeight(i * vertexCountScale, j *<span style="color: #000000;"> vertexCountScale);
+</span><span style="color: #008080;"> 57</span>                 vertices[index] = Vector3.Scale(<span style="color: #0000ff;">new</span><span style="color: #000000;"> Vector3(i, z, j), meshScale);
+</span><span style="color: #008080;"> 58</span>                 uvs[index] = Vector2.Scale(<span style="color: #0000ff;">new</span><span style="color: #000000;"> Vector2(i, j), uvScale);
+</span><span style="color: #008080;"> 59</span> 
+<span style="color: #008080;"> 60</span>                 <span style="color: #008000;">//</span><span style="color: #008000;"> alpha map</span>
+<span style="color: #008080;"> 61</span>                 <span style="color: #0000ff;">int</span> i2 = (<span style="color: #0000ff;">int</span>)(i * terrainData.alphamapWidth / (w -<span style="color: #000000;"> 1f));
+</span><span style="color: #008080;"> 62</span>                 <span style="color: #0000ff;">int</span> j2 = (<span style="color: #0000ff;">int</span>)(j * terrainData.alphamapHeight / (h -<span style="color: #000000;"> 1f));
+</span><span style="color: #008080;"> 63</span>                 i2 = Mathf.Min(terrainData.alphamapWidth - <span style="color: #800080;">1</span><span style="color: #000000;">, i2);
+</span><span style="color: #008080;"> 64</span>                 j2 = Mathf.Min(terrainData.alphamapHeight - <span style="color: #800080;">1</span><span style="color: #000000;">, j2);
+</span><span style="color: #008080;"> 65</span>                 <span style="color: #0000ff;">var</span> alpha0 = alphaMapData[j2, i2, <span style="color: #800080;">0</span><span style="color: #000000;">];
+</span><span style="color: #008080;"> 66</span>                 <span style="color: #0000ff;">var</span> alpha1 = alphaMapData[j2, i2, <span style="color: #800080;">1</span><span style="color: #000000;">];
+</span><span style="color: #008080;"> 67</span>                 <span style="color: #0000ff;">var</span> alpha2 = alphaMapData[j2, i2, <span style="color: #800080;">2</span><span style="color: #000000;">];
+</span><span style="color: #008080;"> 68</span>                 <span style="color: #0000ff;">var</span> alpha3 = alphaMapData[j2, i2, <span style="color: #800080;">3</span><span style="color: #000000;">];
+</span><span style="color: #008080;"> 69</span>                 alphasWeight[index] = <span style="color: #0000ff;">new</span><span style="color: #000000;"> Vector4(alpha0, alpha1, alpha2, alpha3);
+</span><span style="color: #008080;"> 70</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;"> 71</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;"> 72</span> 
+<span style="color: #008080;"> 73</span>         <span style="color: #008000;">/*</span>
+<span style="color: #008080;"> 74</span> <span style="color: #008000;">         * 三角形
+</span><span style="color: #008080;"> 75</span> <span style="color: #008000;">         *     b       c
+</span><span style="color: #008080;"> 76</span> <span style="color: #008000;">         *      *******
+</span><span style="color: #008080;"> 77</span> <span style="color: #008000;">         *      *   * *
+</span><span style="color: #008080;"> 78</span> <span style="color: #008000;">         *      * *   *
+</span><span style="color: #008080;"> 79</span> <span style="color: #008000;">         *      *******
+</span><span style="color: #008080;"> 80</span> <span style="color: #008000;">         *     a       d
+</span><span style="color: #008080;"> 81</span>          <span style="color: #008000;">*/</span>
+<span style="color: #008080;"> 82</span>         <span style="color: #0000ff;">int</span>[] triangles = <span style="color: #0000ff;">new</span> <span style="color: #0000ff;">int</span>[(w - <span style="color: #800080;">1</span>) * (h - <span style="color: #800080;">1</span>) * <span style="color: #800080;">6</span><span style="color: #000000;">];
+</span><span style="color: #008080;"> 83</span>         <span style="color: #0000ff;">int</span> triangleIndex = <span style="color: #800080;">0</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 84</span>         <span style="color: #0000ff;">for</span> (<span style="color: #0000ff;">int</span> i = <span style="color: #800080;">0</span>; i &lt; w - <span style="color: #800080;">1</span>; i++<span style="color: #000000;">)
+</span><span style="color: #008080;"> 85</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 86</span>             <span style="color: #0000ff;">for</span> (<span style="color: #0000ff;">int</span> j = <span style="color: #800080;">0</span>; j &lt; h - <span style="color: #800080;">1</span>; j++<span style="color: #000000;">)
+</span><span style="color: #008080;"> 87</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;"> 88</span>                 <span style="color: #0000ff;">int</span> a = j * w +<span style="color: #000000;"> i;
+</span><span style="color: #008080;"> 89</span>                 <span style="color: #0000ff;">int</span> b = (j + <span style="color: #800080;">1</span>) * w +<span style="color: #000000;"> i;
+</span><span style="color: #008080;"> 90</span>                 <span style="color: #0000ff;">int</span> c = (j + <span style="color: #800080;">1</span>) * w + i + <span style="color: #800080;">1</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 91</span>                 <span style="color: #0000ff;">int</span> d = j * w + i + <span style="color: #800080;">1</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 92</span> 
+<span style="color: #008080;"> 93</span>                 triangles[triangleIndex++] =<span style="color: #000000;"> a;
+</span><span style="color: #008080;"> 94</span>                 triangles[triangleIndex++] =<span style="color: #000000;"> b;
+</span><span style="color: #008080;"> 95</span>                 triangles[triangleIndex++] =<span style="color: #000000;"> c;
+</span><span style="color: #008080;"> 96</span> 
+<span style="color: #008080;"> 97</span>                 triangles[triangleIndex++] =<span style="color: #000000;"> a;
+</span><span style="color: #008080;"> 98</span>                 triangles[triangleIndex++] =<span style="color: #000000;"> c;
+</span><span style="color: #008080;"> 99</span>                 triangles[triangleIndex++] =<span style="color: #000000;"> d;
+</span><span style="color: #008080;">100</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">101</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">102</span> 
+<span style="color: #008080;">103</span>         Mesh mesh = <span style="color: #0000ff;">new</span><span style="color: #000000;"> Mesh();
+</span><span style="color: #008080;">104</span>         mesh.vertices =<span style="color: #000000;"> vertices;
+</span><span style="color: #008080;">105</span>         mesh.uv =<span style="color: #000000;"> uvs;
+</span><span style="color: #008080;">106</span>         mesh.triangles =<span style="color: #000000;"> triangles;
+</span><span style="color: #008080;">107</span>         mesh.tangents = alphasWeight;       <span style="color: #008000;">//</span><span style="color: #008000;"> 将地形纹理的比重写入到切线中</span>
+<span style="color: #008080;">108</span> 
+<span style="color: #008080;">109</span>         <span style="color: #0000ff;">string</span> transName = <span style="color: #800000;">"</span><span style="color: #800000;">[dev]MeshFromTerrainData</span><span style="color: #800000;">"</span><span style="color: #000000;">;
+</span><span style="color: #008080;">110</span>         <span style="color: #0000ff;">var</span> t =<span style="color: #000000;"> terrainObj.transform.parent.Find(transName);
+</span><span style="color: #008080;">111</span>         <span style="color: #0000ff;">if</span> (t == <span style="color: #0000ff;">null</span><span style="color: #000000;">)
+</span><span style="color: #008080;">112</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">113</span>             GameObject go = <span style="color: #0000ff;">new</span> GameObject(transName, <span style="color: #0000ff;">typeof</span>(MeshFilter), <span style="color: #0000ff;">typeof</span>(MeshRenderer), <span style="color: #0000ff;">typeof</span><span style="color: #000000;">(MeshCollider));
+</span><span style="color: #008080;">114</span>             t =<span style="color: #000000;"> go.transform;
+</span><span style="color: #008080;">115</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">116</span> 
+<span style="color: #008080;">117</span>         <span style="color: #008000;">//</span><span style="color: #008000;"> 地形渲染</span>
+<span style="color: #008080;">118</span>         MeshRenderer mr = t.GetComponent&lt;MeshRenderer&gt;<span style="color: #000000;">();
+</span><span style="color: #008080;">119</span>         Material mat =<span style="color: #000000;"> mr.sharedMaterial;
+</span><span style="color: #008080;">120</span>         <span style="color: #0000ff;">if</span> (!<span style="color: #000000;">mat)
+</span><span style="color: #008080;">121</span>             mat = <span style="color: #0000ff;">new</span> Material(Shader.Find(<span style="color: #800000;">"</span><span style="color: #800000;">Custom/Environment/TerrainSimple</span><span style="color: #800000;">"</span><span style="color: #000000;">));
+</span><span style="color: #008080;">122</span> 
+<span style="color: #008080;">123</span>         <span style="color: #0000ff;">for</span> (<span style="color: #0000ff;">int</span> i = <span style="color: #800080;">0</span>; i &lt; terrainData.splatPrototypes.Length; i++<span style="color: #000000;">)
+</span><span style="color: #008080;">124</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">125</span>             <span style="color: #0000ff;">var</span> sp =<span style="color: #000000;"> terrainData.splatPrototypes[i];
+</span><span style="color: #008080;">126</span>             mat.SetTexture(<span style="color: #800000;">"</span><span style="color: #800000;">_Texture</span><span style="color: #800000;">"</span> +<span style="color: #000000;"> i, sp.texture);
+</span><span style="color: #008080;">127</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">128</span> 
+<span style="color: #008080;">129</span>         t.parent =<span style="color: #000000;"> terrainObj.transform.parent;
+</span><span style="color: #008080;">130</span>         t.position =<span style="color: #000000;"> terrainObj.transform.position;
+</span><span style="color: #008080;">131</span>         t.gameObject.layer =<span style="color: #000000;"> terrainObj.layer;
+</span><span style="color: #008080;">132</span>         t.GetComponent&lt;MeshFilter&gt;().sharedMesh =<span style="color: #000000;"> mesh;
+</span><span style="color: #008080;">133</span>         t.GetComponent&lt;MeshCollider&gt;().sharedMesh =<span style="color: #000000;"> mesh;
+</span><span style="color: #008080;">134</span>         mr.sharedMaterial =<span style="color: #000000;"> mat;
+</span><span style="color: #008080;">135</span> 
+<span style="color: #008080;">136</span>         t.gameObject.SetActive(<span style="color: #0000ff;">true</span><span style="color: #000000;">);
+</span><span style="color: #008080;">137</span>         terrainObj.SetActive(<span style="color: #0000ff;">false</span><span style="color: #000000;">);
+</span><span style="color: #008080;">138</span> 
+<span style="color: #008080;">139</span>         Debug.Log(<span style="color: #800000;">"</span><span style="color: #800000;">Convert terrain to mesh finished!</span><span style="color: #800000;">"</span><span style="color: #000000;">);
+</span><span style="color: #008080;">140</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">141</span> }</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<span class="cnblogs_code_collapse" style="display: none;">TerrainToMeshConverter</span></div>
+<p>&nbsp;</p>
+<p>渲染地形的shader如下（不支持光照）：</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show(&#39;4625dbc2-b203-4c8a-86df-60375cd5e144&#39;)"><img id="code_img_closed_4625dbc2-b203-4c8a-86df-60375cd5e144" class="code_img_closed" src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/ContractedBlock.gif" alt="" style="display: none;"><img id="code_img_opened_4625dbc2-b203-4c8a-86df-60375cd5e144" class="code_img_opened" style="" onclick="cnblogs_code_hide(&#39;4625dbc2-b203-4c8a-86df-60375cd5e144&#39;,event)" src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_4625dbc2-b203-4c8a-86df-60375cd5e144" class="cnblogs_code_hide" style="display: block;"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008080;"> 1</span> Shader <span style="color: #800000;">"</span><span style="color: #800000;">Custom/Environment/TerrainSimple</span><span style="color: #800000;">"</span>
+<span style="color: #008080;"> 2</span> <span style="color: #000000;">{
+</span><span style="color: #008080;"> 3</span> <span style="color: #000000;">    Properties
+</span><span style="color: #008080;"> 4</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 5</span>         _Texture0 (<span style="color: #800000;">"</span><span style="color: #800000;">Texture 1</span><span style="color: #800000;">"</span>, 2D) = <span style="color: #800000;">"</span><span style="color: #800000;">white</span><span style="color: #800000;">"</span><span style="color: #000000;"> {}
+</span><span style="color: #008080;"> 6</span>         _Texture1 (<span style="color: #800000;">"</span><span style="color: #800000;">Texture 2</span><span style="color: #800000;">"</span>, 2D) = <span style="color: #800000;">"</span><span style="color: #800000;">white</span><span style="color: #800000;">"</span><span style="color: #000000;"> {}
+</span><span style="color: #008080;"> 7</span>         _Texture2 (<span style="color: #800000;">"</span><span style="color: #800000;">Texture 3</span><span style="color: #800000;">"</span>, 2D) = <span style="color: #800000;">"</span><span style="color: #800000;">white</span><span style="color: #800000;">"</span><span style="color: #000000;"> {}
+</span><span style="color: #008080;"> 8</span>         _Texture3 (<span style="color: #800000;">"</span><span style="color: #800000;">Texture 4</span><span style="color: #800000;">"</span>, 2D) = <span style="color: #800000;">"</span><span style="color: #800000;">white</span><span style="color: #800000;">"</span><span style="color: #000000;"> {}
+</span><span style="color: #008080;"> 9</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">10</span>     
+<span style="color: #008080;">11</span> <span style="color: #000000;">    SubShader
+</span><span style="color: #008080;">12</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">13</span>         Tags { <span style="color: #800000;">"</span><span style="color: #800000;">RenderType</span><span style="color: #800000;">"</span> = <span style="color: #800000;">"</span><span style="color: #800000;">Opaque</span><span style="color: #800000;">"</span><span style="color: #000000;"> }
+</span><span style="color: #008080;">14</span>         LOD <span style="color: #800080;">200</span>
+<span style="color: #008080;">15</span>         
+<span style="color: #008080;">16</span> <span style="color: #000000;">        Pass
+</span><span style="color: #008080;">17</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">18</span> <span style="color: #000000;">            CGPROGRAM
+</span><span style="color: #008080;">19</span>             <span style="color: #0000ff;">#pragma</span> vertex vert
+<span style="color: #008080;">20</span>             <span style="color: #0000ff;">#pragma</span> fragment frag
+<span style="color: #008080;">21</span> 
+<span style="color: #008080;">22</span> <span style="color: #000000;">            sampler2D _Texture0;
+</span><span style="color: #008080;">23</span> <span style="color: #000000;">            sampler2D _Texture1;
+</span><span style="color: #008080;">24</span> <span style="color: #000000;">            sampler2D _Texture2;
+</span><span style="color: #008080;">25</span> <span style="color: #000000;">            sampler2D _Texture3;
+</span><span style="color: #008080;">26</span> 
+<span style="color: #008080;">27</span>             <span style="color: #0000ff;">struct</span><span style="color: #000000;"> appdata
+</span><span style="color: #008080;">28</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">29</span> <span style="color: #000000;">                float4 vertex : POSITION;
+</span><span style="color: #008080;">30</span> <span style="color: #000000;">                float2 uv : TEXCOORD0;
+</span><span style="color: #008080;">31</span> <span style="color: #000000;">                float4 tangent : TANGENT;
+</span><span style="color: #008080;">32</span> <span style="color: #000000;">            };
+</span><span style="color: #008080;">33</span> 
+<span style="color: #008080;">34</span>             <span style="color: #0000ff;">struct</span><span style="color: #000000;"> v2f
+</span><span style="color: #008080;">35</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">36</span> <span style="color: #000000;">                float4 pos : SV_POSITION;
+</span><span style="color: #008080;">37</span> <span style="color: #000000;">                float2 uv : TEXCOORD0;
+</span><span style="color: #008080;">38</span> <span style="color: #000000;">                float4 weight : TEXCOORD1;
+</span><span style="color: #008080;">39</span> <span style="color: #000000;">            };
+</span><span style="color: #008080;">40</span> 
+<span style="color: #008080;">41</span> <span style="color: #000000;">            v2f vert(appdata v)
+</span><span style="color: #008080;">42</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">43</span> <span style="color: #000000;">                v2f o;
+</span><span style="color: #008080;">44</span>                 o.pos =<span style="color: #000000;"> UnityObjectToClipPos(v.vertex);
+</span><span style="color: #008080;">45</span>                 o.weight =<span style="color: #000000;"> v.tangent;
+</span><span style="color: #008080;">46</span>                 o.uv =<span style="color: #000000;"> v.uv;
+</span><span style="color: #008080;">47</span>                 <span style="color: #0000ff;">return</span><span style="color: #000000;"> o;
+</span><span style="color: #008080;">48</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">49</span> 
+<span style="color: #008080;">50</span> <span style="color: #000000;">            fixed4 frag(v2f i) : SV_TARGET
+</span><span style="color: #008080;">51</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">52</span>                 fixed4 t0 =<span style="color: #000000;"> tex2D(_Texture0, i.uv);
+</span><span style="color: #008080;">53</span>                 fixed4 t1 =<span style="color: #000000;"> tex2D(_Texture1, i.uv);
+</span><span style="color: #008080;">54</span>                 fixed4 t2 =<span style="color: #000000;"> tex2D(_Texture2, i.uv);
+</span><span style="color: #008080;">55</span>                 fixed4 t3 =<span style="color: #000000;"> tex2D(_Texture3, i.uv);
+</span><span style="color: #008080;">56</span>                 fixed4 tex = t0 * i.weight.x + t1 * i.weight.y + t2 * i.weight.z + t3 *<span style="color: #000000;"> i.weight.w;
+</span><span style="color: #008080;">57</span>                 <span style="color: #0000ff;">return</span><span style="color: #000000;"> tex;
+</span><span style="color: #008080;">58</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">59</span> 
+<span style="color: #008080;">60</span> <span style="color: #000000;">            ENDCG
+</span><span style="color: #008080;">61</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">62</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">63</span> 
+<span style="color: #008080;">64</span>     Fallback <span style="color: #800000;">"</span><span style="color: #800000;">Diffuse</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">65</span> }</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<span class="cnblogs_code_collapse" style="display: none;">Custom/Environment/TerrainSimple</span></div>
+<p>&nbsp;</p>
+<p>生成的mesh与原terrain对比如下，左边为mesh，右边为terrain:</p>
+<p><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/509915-20160901193732402-11876893.png" alt=""></p>
+<p>&nbsp;</p>
+<p>另提供一支持光照的地形shader：</p>
+<div class="cnblogs_code" onclick="cnblogs_code_show(&#39;cf99e4fd-48ca-42ed-958c-1c4195644d61&#39;)"><img id="code_img_closed_cf99e4fd-48ca-42ed-958c-1c4195644d61" class="code_img_closed" src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/ContractedBlock.gif" alt="" style="display: none;"><img id="code_img_opened_cf99e4fd-48ca-42ed-958c-1c4195644d61" class="code_img_opened" style="" onclick="cnblogs_code_hide(&#39;cf99e4fd-48ca-42ed-958c-1c4195644d61&#39;,event)" src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_cf99e4fd-48ca-42ed-958c-1c4195644d61" class="cnblogs_code_hide" style="display: block;"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008080;">  1</span> <span style="color: #008000;">//</span><span style="color: #008000;"> Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'</span>
+<span style="color: #008080;">  2</span> 
+<span style="color: #008080;">  3</span> Shader <span style="color: #800000;">"</span><span style="color: #800000;">Custom/Environment/LightedTerrain</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">  4</span> <span style="color: #000000;">{
+</span><span style="color: #008080;">  5</span> <span style="color: #000000;">    Properties
+</span><span style="color: #008080;">  6</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;">  7</span>         _Texture0 (<span style="color: #800000;">"</span><span style="color: #800000;">Texture 1</span><span style="color: #800000;">"</span>, 2D) = <span style="color: #800000;">"</span><span style="color: #800000;">white</span><span style="color: #800000;">"</span><span style="color: #000000;"> {}
+</span><span style="color: #008080;">  8</span>         _Texture1 (<span style="color: #800000;">"</span><span style="color: #800000;">Texture 2</span><span style="color: #800000;">"</span>, 2D) = <span style="color: #800000;">"</span><span style="color: #800000;">white</span><span style="color: #800000;">"</span><span style="color: #000000;"> {}
+</span><span style="color: #008080;">  9</span>         _Texture2 (<span style="color: #800000;">"</span><span style="color: #800000;">Texture 3</span><span style="color: #800000;">"</span>, 2D) = <span style="color: #800000;">"</span><span style="color: #800000;">white</span><span style="color: #800000;">"</span><span style="color: #000000;"> {}
+</span><span style="color: #008080;"> 10</span>         _Texture3 (<span style="color: #800000;">"</span><span style="color: #800000;">Texture 4</span><span style="color: #800000;">"</span>, 2D) = <span style="color: #800000;">"</span><span style="color: #800000;">white</span><span style="color: #800000;">"</span><span style="color: #000000;"> {}
+</span><span style="color: #008080;"> 11</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;"> 12</span>     
+<span style="color: #008080;"> 13</span> <span style="color: #000000;">    SubShader
+</span><span style="color: #008080;"> 14</span> <span style="color: #000000;">    {
+</span><span style="color: #008080;"> 15</span>         Tags { <span style="color: #800000;">"</span><span style="color: #800000;">RenderType</span><span style="color: #800000;">"</span> = <span style="color: #800000;">"</span><span style="color: #800000;">Opaque</span><span style="color: #800000;">"</span><span style="color: #000000;"> }
+</span><span style="color: #008080;"> 16</span>         LOD <span style="color: #800080;">200</span>
+<span style="color: #008080;"> 17</span>         
+<span style="color: #008080;"> 18</span> <span style="color: #000000;">        Pass
+</span><span style="color: #008080;"> 19</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;"> 20</span> <span style="color: #000000;">            Tags
+</span><span style="color: #008080;"> 21</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;"> 22</span>                 <span style="color: #800000;">"</span><span style="color: #800000;">LightMode</span><span style="color: #800000;">"</span> = <span style="color: #800000;">"</span><span style="color: #800000;">ForwardBase</span><span style="color: #800000;">"</span>
+<span style="color: #008080;"> 23</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;"> 24</span> 
+<span style="color: #008080;"> 25</span> <span style="color: #000000;">            CGPROGRAM
+</span><span style="color: #008080;"> 26</span>             <span style="color: #0000ff;">#pragma</span> vertex vert
+<span style="color: #008080;"> 27</span>             <span style="color: #0000ff;">#pragma</span> fragment frag
+<span style="color: #008080;"> 28</span>             <span style="color: #0000ff;">#pragma</span> multi_compile_fwdbase
+<span style="color: #008080;"> 29</span>             <span style="color: #0000ff;">#pragma</span> multi_compile_fog
+<span style="color: #008080;"> 30</span> 
+<span style="color: #008080;"> 31</span>             #include <span style="color: #800000;">"</span><span style="color: #800000;">UnityCG.cginc</span><span style="color: #800000;">"</span>
+<span style="color: #008080;"> 32</span>             #include <span style="color: #800000;">"</span><span style="color: #800000;">Lighting.cginc</span><span style="color: #800000;">"</span>
+<span style="color: #008080;"> 33</span>             #include <span style="color: #800000;">"</span><span style="color: #800000;">AutoLight.cginc</span><span style="color: #800000;">"</span>
+<span style="color: #008080;"> 34</span> 
+<span style="color: #008080;"> 35</span> <span style="color: #000000;">            sampler2D _Texture0;
+</span><span style="color: #008080;"> 36</span> <span style="color: #000000;">            sampler2D _Texture1;
+</span><span style="color: #008080;"> 37</span> <span style="color: #000000;">            sampler2D _Texture2;
+</span><span style="color: #008080;"> 38</span> <span style="color: #000000;">            sampler2D _Texture3;
+</span><span style="color: #008080;"> 39</span> 
+<span style="color: #008080;"> 40</span>             <span style="color: #0000ff;">struct</span><span style="color: #000000;"> appdata
+</span><span style="color: #008080;"> 41</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;"> 42</span> <span style="color: #000000;">                float4 vertex : POSITION;
+</span><span style="color: #008080;"> 43</span> <span style="color: #000000;">                float2 uv : TEXCOORD0;
+</span><span style="color: #008080;"> 44</span> <span style="color: #000000;">                float4 tangent : TANGENT;
+</span><span style="color: #008080;"> 45</span> <span style="color: #000000;">                float3 normal : NORMAL;
+</span><span style="color: #008080;"> 46</span> <span style="color: #000000;">            };
+</span><span style="color: #008080;"> 47</span> 
+<span style="color: #008080;"> 48</span>             <span style="color: #0000ff;">struct</span><span style="color: #000000;"> v2f
+</span><span style="color: #008080;"> 49</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;"> 50</span> <span style="color: #000000;">                float4 pos : SV_POSITION;
+</span><span style="color: #008080;"> 51</span> <span style="color: #000000;">                float2 uv : TEXCOORD0;
+</span><span style="color: #008080;"> 52</span> <span style="color: #000000;">                float4 weight : TEXCOORD1;
+</span><span style="color: #008080;"> 53</span> <span style="color: #000000;">                float3 worldPos : TEXCOORD2;
+</span><span style="color: #008080;"> 54</span> <span style="color: #000000;">                float3 worldNormal : TEXCOORD3;
+</span><span style="color: #008080;"> 55</span>                 SHADOW_COORDS(<span style="color: #800080;">4</span><span style="color: #000000;">)
+</span><span style="color: #008080;"> 56</span>                 UNITY_FOG_COORDS(<span style="color: #800080;">5</span><span style="color: #000000;">)
+</span><span style="color: #008080;"> 57</span> <span style="color: #000000;">            };
+</span><span style="color: #008080;"> 58</span> 
+<span style="color: #008080;"> 59</span> <span style="color: #000000;">            v2f vert(appdata v)
+</span><span style="color: #008080;"> 60</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;"> 61</span> <span style="color: #000000;">                v2f o;
+</span><span style="color: #008080;"> 62</span>                 o.pos =<span style="color: #000000;"> UnityObjectToClipPos(v.vertex);
+</span><span style="color: #008080;"> 63</span>                 o.weight =<span style="color: #000000;"> v.tangent;
+</span><span style="color: #008080;"> 64</span>                 o.uv =<span style="color: #000000;"> v.uv;
+</span><span style="color: #008080;"> 65</span>                 o.worldPos =<span style="color: #000000;"> mul(unity_ObjectToWorld, v.vertex);
+</span><span style="color: #008080;"> 66</span>                 o.worldNormal =<span style="color: #000000;"> UnityObjectToWorldNormal(v.normal);
+</span><span style="color: #008080;"> 67</span> <span style="color: #000000;">                TRANSFER_SHADOW(o);
+</span><span style="color: #008080;"> 68</span> <span style="color: #000000;">                UNITY_TRANSFER_FOG(o, o.pos);
+</span><span style="color: #008080;"> 69</span>                 <span style="color: #0000ff;">return</span><span style="color: #000000;"> o;
+</span><span style="color: #008080;"> 70</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;"> 71</span> 
+<span style="color: #008080;"> 72</span> <span style="color: #000000;">            fixed4 frag(v2f i) : SV_TARGET
+</span><span style="color: #008080;"> 73</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;"> 74</span>                 fixed4 t0 =<span style="color: #000000;"> tex2D(_Texture0, i.uv);
+</span><span style="color: #008080;"> 75</span>                 fixed4 t1 =<span style="color: #000000;"> tex2D(_Texture1, i.uv);
+</span><span style="color: #008080;"> 76</span>                 fixed4 t2 =<span style="color: #000000;"> tex2D(_Texture2, i.uv);
+</span><span style="color: #008080;"> 77</span>                 fixed4 t3 =<span style="color: #000000;"> tex2D(_Texture3, i.uv);
+</span><span style="color: #008080;"> 78</span>                 fixed4 tex = t0 * i.weight.x + t1 * i.weight.y + t2 * i.weight.z + t3 *<span style="color: #000000;"> i.weight.w;
+</span><span style="color: #008080;"> 79</span> 
+<span style="color: #008080;"> 80</span>                 fixed3 albedo =<span style="color: #000000;"> tex.rgb;
+</span><span style="color: #008080;"> 81</span> 
+<span style="color: #008080;"> 82</span>                 fixed3 ambient = albedo *<span style="color: #000000;"> UNITY_LIGHTMODEL_AMBIENT.rgb;
+</span><span style="color: #008080;"> 83</span> 
+<span style="color: #008080;"> 84</span>                 float3 worldLight =<span style="color: #000000;"> normalize(UnityWorldSpaceLightDir(i.worldPos));
+</span><span style="color: #008080;"> 85</span>                 <span style="color: #0000ff;">float</span> halfLambert = dot(worldLight, i.worldNormal) * <span style="color: #800080;">0.5</span> + <span style="color: #800080;">0.5</span><span style="color: #000000;">;
+</span><span style="color: #008080;"> 86</span>                 fixed3 diffuse = albedo * _LightColor0.rgb *<span style="color: #000000;"> halfLambert;
+</span><span style="color: #008080;"> 87</span> 
+<span style="color: #008080;"> 88</span>                 float3 worldView =<span style="color: #000000;"> normalize(UnityWorldSpaceViewDir(i.worldPos));
+</span><span style="color: #008080;"> 89</span>                 float3 halfDir = normalize(worldView +<span style="color: #000000;"> worldLight);
+</span><span style="color: #008080;"> 90</span>                 fixed3 specular = albedo * _LightColor0.rgb * max(dot(halfDir, i.worldNormal), <span style="color: #800080;">0</span><span style="color: #000000;">);
+</span><span style="color: #008080;"> 91</span> 
+<span style="color: #008080;"> 92</span> <span style="color: #000000;">                UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
+</span><span style="color: #008080;"> 93</span>                 fixed4 col = fixed4(ambient + (diffuse + specular) *<span style="color: #000000;"> atten, tex.a);
+</span><span style="color: #008080;"> 94</span> <span style="color: #000000;">                UNITY_APPLY_FOG(i.fogCoord, col);
+</span><span style="color: #008080;"> 95</span> 
+<span style="color: #008080;"> 96</span>                 <span style="color: #0000ff;">return</span><span style="color: #000000;"> col;
+</span><span style="color: #008080;"> 97</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;"> 98</span> 
+<span style="color: #008080;"> 99</span> <span style="color: #000000;">            ENDCG
+</span><span style="color: #008080;">100</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">101</span> 
+<span style="color: #008080;">102</span> <span style="color: #000000;">        Pass
+</span><span style="color: #008080;">103</span> <span style="color: #000000;">        {
+</span><span style="color: #008080;">104</span> <span style="color: #000000;">            Tags
+</span><span style="color: #008080;">105</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">106</span>                 <span style="color: #800000;">"</span><span style="color: #800000;">LightMode</span><span style="color: #800000;">"</span> = <span style="color: #800000;">"</span><span style="color: #800000;">ForwardAdd</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">107</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">108</span> <span style="color: #000000;">            Blend One One
+</span><span style="color: #008080;">109</span> 
+<span style="color: #008080;">110</span> <span style="color: #000000;">            CGPROGRAM
+</span><span style="color: #008080;">111</span>             <span style="color: #0000ff;">#pragma</span> vertex vert
+<span style="color: #008080;">112</span>             <span style="color: #0000ff;">#pragma</span> fragment frag
+<span style="color: #008080;">113</span>             <span style="color: #0000ff;">#pragma</span> multi_compile_fwdadd
+<span style="color: #008080;">114</span> 
+<span style="color: #008080;">115</span>             #include <span style="color: #800000;">"</span><span style="color: #800000;">UnityCG.cginc</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">116</span>             #include <span style="color: #800000;">"</span><span style="color: #800000;">Lighting.cginc</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">117</span>             #include <span style="color: #800000;">"</span><span style="color: #800000;">AutoLight.cginc</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">118</span> 
+<span style="color: #008080;">119</span> <span style="color: #000000;">            sampler2D _Texture0;
+</span><span style="color: #008080;">120</span> <span style="color: #000000;">            sampler2D _Texture1;
+</span><span style="color: #008080;">121</span> <span style="color: #000000;">            sampler2D _Texture2;
+</span><span style="color: #008080;">122</span> <span style="color: #000000;">            sampler2D _Texture3;
+</span><span style="color: #008080;">123</span> 
+<span style="color: #008080;">124</span>             <span style="color: #0000ff;">struct</span><span style="color: #000000;"> appdata
+</span><span style="color: #008080;">125</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">126</span> <span style="color: #000000;">                float4 vertex : POSITION;
+</span><span style="color: #008080;">127</span> <span style="color: #000000;">                float2 uv : TEXCOORD0;
+</span><span style="color: #008080;">128</span> <span style="color: #000000;">                float4 tangent : TANGENT;
+</span><span style="color: #008080;">129</span> <span style="color: #000000;">                float3 normal : NORMAL;
+</span><span style="color: #008080;">130</span> <span style="color: #000000;">            };
+</span><span style="color: #008080;">131</span> 
+<span style="color: #008080;">132</span>             <span style="color: #0000ff;">struct</span><span style="color: #000000;"> v2f
+</span><span style="color: #008080;">133</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">134</span> <span style="color: #000000;">                float4 pos : SV_POSITION;
+</span><span style="color: #008080;">135</span> <span style="color: #000000;">                float2 uv : TEXCOORD0;
+</span><span style="color: #008080;">136</span> <span style="color: #000000;">                float4 weight : TEXCOORD1;
+</span><span style="color: #008080;">137</span> <span style="color: #000000;">                float3 worldPos : TEXCOORD2;
+</span><span style="color: #008080;">138</span> <span style="color: #000000;">                float3 worldNormal : TEXCOORD3;
+</span><span style="color: #008080;">139</span>                 SHADOW_COORDS(<span style="color: #800080;">4</span><span style="color: #000000;">)
+</span><span style="color: #008080;">140</span> <span style="color: #000000;">            };
+</span><span style="color: #008080;">141</span> 
+<span style="color: #008080;">142</span> <span style="color: #000000;">            v2f vert(appdata v)
+</span><span style="color: #008080;">143</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">144</span> <span style="color: #000000;">                v2f o;
+</span><span style="color: #008080;">145</span>                 o.pos =<span style="color: #000000;"> UnityObjectToClipPos(v.vertex);
+</span><span style="color: #008080;">146</span>                 o.weight =<span style="color: #000000;"> v.tangent;
+</span><span style="color: #008080;">147</span>                 o.uv =<span style="color: #000000;"> v.uv;
+</span><span style="color: #008080;">148</span>                 o.worldPos =<span style="color: #000000;"> mul(unity_ObjectToWorld, v.vertex);
+</span><span style="color: #008080;">149</span>                 o.worldNormal =<span style="color: #000000;"> UnityObjectToWorldNormal(v.normal);
+</span><span style="color: #008080;">150</span> <span style="color: #000000;">                TRANSFER_SHADOW(o);
+</span><span style="color: #008080;">151</span>                 <span style="color: #0000ff;">return</span><span style="color: #000000;"> o;
+</span><span style="color: #008080;">152</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">153</span> 
+<span style="color: #008080;">154</span> <span style="color: #000000;">            fixed4 frag(v2f i) : SV_TARGET
+</span><span style="color: #008080;">155</span> <span style="color: #000000;">            {
+</span><span style="color: #008080;">156</span>                 fixed4 t0 =<span style="color: #000000;"> tex2D(_Texture0, i.uv);
+</span><span style="color: #008080;">157</span>                 fixed4 t1 =<span style="color: #000000;"> tex2D(_Texture1, i.uv);
+</span><span style="color: #008080;">158</span>                 fixed4 t2 =<span style="color: #000000;"> tex2D(_Texture2, i.uv);
+</span><span style="color: #008080;">159</span>                 fixed4 t3 =<span style="color: #000000;"> tex2D(_Texture3, i.uv);
+</span><span style="color: #008080;">160</span>                 fixed4 tex = t0 * i.weight.x + t1 * i.weight.y + t2 * i.weight.z + t3 *<span style="color: #000000;"> i.weight.w;
+</span><span style="color: #008080;">161</span> 
+<span style="color: #008080;">162</span>                 fixed3 albedo =<span style="color: #000000;"> tex.rgb;
+</span><span style="color: #008080;">163</span> 
+<span style="color: #008080;">164</span>                 float3 worldLight =<span style="color: #000000;"> normalize(UnityWorldSpaceLightDir(i.worldPos));
+</span><span style="color: #008080;">165</span>                 <span style="color: #0000ff;">float</span> halfLambert = dot(worldLight, i.worldNormal) * <span style="color: #800080;">0.5</span> + <span style="color: #800080;">0.5</span><span style="color: #000000;">;
+</span><span style="color: #008080;">166</span>                 fixed3 diffuse = albedo * _LightColor0.rgb *<span style="color: #000000;"> halfLambert;
+</span><span style="color: #008080;">167</span> 
+<span style="color: #008080;">168</span>                 float3 worldView =<span style="color: #000000;"> normalize(UnityWorldSpaceViewDir(i.worldPos));
+</span><span style="color: #008080;">169</span>                 float3 halfDir = normalize(worldView +<span style="color: #000000;"> worldLight);
+</span><span style="color: #008080;">170</span>                 fixed3 specular = albedo * _LightColor0.rgb * max(dot(halfDir, i.worldNormal), <span style="color: #800080;">0</span><span style="color: #000000;">);
+</span><span style="color: #008080;">171</span> 
+<span style="color: #008080;">172</span> <span style="color: #000000;">                UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
+</span><span style="color: #008080;">173</span>                 fixed4 col = fixed4((diffuse + specular ) *<span style="color: #000000;"> atten, tex.a);
+</span><span style="color: #008080;">174</span> 
+<span style="color: #008080;">175</span>                 <span style="color: #0000ff;">return</span><span style="color: #000000;"> col;
+</span><span style="color: #008080;">176</span> <span style="color: #000000;">            }
+</span><span style="color: #008080;">177</span> 
+<span style="color: #008080;">178</span> <span style="color: #000000;">            ENDCG
+</span><span style="color: #008080;">179</span> <span style="color: #000000;">        }
+</span><span style="color: #008080;">180</span> <span style="color: #000000;">    }
+</span><span style="color: #008080;">181</span> 
+<span style="color: #008080;">182</span>     Fallback <span style="color: #800000;">"</span><span style="color: #800000;">Diffuse</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">183</span> }</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<span class="cnblogs_code_collapse" style="display: none;">Custom/Environment/LightedTerrain</span></div>
+<p>&nbsp;</p>
+<p>光照效果如下：</p>
+<p><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/509915-20170810172620074-556930106.png" alt=""></p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(5831062,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;055a7e37-a896-e211-9010-c3d7423e3b07&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/jietian331/" target="_blank"><img src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/20151031120411.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/jietian331/">通臂猿猴</a><br>
+            <a href="http://home.cnblogs.com/u/jietian331/followees">关注 - 1</a><br>
+            <a href="http://home.cnblogs.com/u/jietian331/followers">粉丝 - 2</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;055a7e37-a896-e211-9010-c3d7423e3b07&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(5831062,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">2</span>
+    </div>
+    <div class="buryit" onclick="votePost(5831062,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/jietian331/p/5779996.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/jietian331/p/5779996.html" title="发布于2016-08-17 14:50">c#如何序列化与反序列化json文件</a><br><a href="http://www.cnblogs.com/jietian331/p/5916568.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/jietian331/p/5916568.html" title="发布于2016-09-28 15:30">unity3d 多人寻路堵塞堆叠问题</a><br></div>
+</div>
+
+
+		</div>
+		<div class="itemdesc">
+			发表于 <span id="post-date">2016-09-01 19:39</span> <a href="http://www.cnblogs.com/jietian331/">通臂猿猴</a> 阅读(<span id="post_view_count">2350</span>) 评论(<span id="post_comment_count">2</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=5831062" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/jietian331/p/5831062.html#" onclick="AddToWz(5831062);return false;">收藏</a>
+		</div>
+	</div>
+	<div class="seperator">&nbsp;</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=146923,cb_entryId=5831062,cb_blogApp=currentBlogApp,cb_blogUserGuid='055a7e37-a896-e211-9010-c3d7423e3b07',cb_entryCreatedDate='2016/9/1 19:39:00';loadViewCount(cb_entryId);</script>
+	
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<div class="post">
+<a name="评论"></a>
+<div class="moreinfo">
+	<div class="moreinfotitle">
+		评论
+	</div>
+	
+	
+			<div class="comments">
+		
+			<div class="comment">
+				<div class="comment_title">
+					<a href="http://www.cnblogs.com/jietian331/p/5831062.html#3604181" class="layer">#1楼</a><a name="3604181" id="comment_anchor_3604181"></a>
+				</div>
+				<div class="comment_content"><div id="comment_body_3604181" class="blog_comment_body">不错，很牛逼啊，就是贴图数的修改，还有shader的贴图乘上uv有点蒙蔽！</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3604181,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3604181,&#39;Bury&#39;,this)">反对(0)</a></div></div>
+				<div class="comment_footer"><a id="a_comment_author_3604181" href="http://home.cnblogs.com/u/1066736/" target="_blank">Acsi</a> <a href="http://msg.cnblogs.com/send/Acsi" title="发送站内短消息" class="sendMsg2This">&nbsp;</a> 评论于  <span class="comment_date">2017-01-16 10:47</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+		
+			<div class="comment">
+				<div class="comment_title">
+					<a href="http://www.cnblogs.com/jietian331/p/5831062.html#3784063" class="layer">#2楼</a><a name="3784063" id="comment_anchor_3784063"></a><span id="comment-maxId" style="display:none;">3784063</span><span id="comment-maxDate" style="display:none;">2017/9/14 14:26:12</span>
+				</div>
+				<div class="comment_content"><div id="comment_body_3784063" class="blog_comment_body">good</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3784063,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3784063,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3784063_avatar" style="display:none;">http://pic.cnblogs.com/face/1223269/20170821114236.png</span></div>
+				<div class="comment_footer"><a id="a_comment_author_3784063" href="http://www.cnblogs.com/harran/" target="_blank">希望与绝望</a> <a href="http://msg.cnblogs.com/send/%E5%B8%8C%E6%9C%9B%E4%B8%8E%E7%BB%9D%E6%9C%9B" title="发送站内短消息" class="sendMsg2This">&nbsp;</a> 评论于  <span class="comment_date">2017-09-14 14:26</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+		
+			</div>
+		
+</div>
+</div>
+<div class="seperator">&nbsp;</div>
+<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/jietian331/p/5831062.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/jietian331/p/5831062.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://cloud.tencent.com/developer/labs?fromSource=gwzcw.436876.436876.436876" target="_blank">【推荐】腾讯云上实验室 1小时搭建人工智能应用</a><br><a href="http://www.gcpowertools.com.cn/products/spreadjs/?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=SpreadJS&amp;utm_campaign=community" target="_blank">【推荐】可嵌入您系统的“在线Excel”！SpreadJS 纯前端表格控件</a><br><a href="http://click.aliyun.com/m/18488/" target="_blank">【推荐】阿里云“全民云计算”优惠升级</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="https://www.mtyun.com/promote/69f73a72-f46d-4103-88e5-94ed2f81259d/" target="_blank"><img width="300" height="250" src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/24442-20170921101521025-1845913848.jpg" alt="美团云0921"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/579347/" target="_blank">中国联通推“国庆中秋8日包”：20元17GB流量</a><br> ·  <a href="http://news.cnblogs.com/n/579346/" target="_blank">微信上线飞机“全自动延误险” 买35元最高赔210元</a><br> ·  <a href="http://news.cnblogs.com/n/579338/" target="_blank">瑞士研发出可食用温度传感器 解决食物保鲜难题</a><br> ·  <a href="http://news.cnblogs.com/n/579343/" target="_blank">外国网友吵翻：东京游戏展这个模特是人是机器？</a><br> ·  <a href="http://news.cnblogs.com/n/579344/" target="_blank">Facebook推新功能 精准匹配献血者和需要输血者</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"><a href="https://www.jiguang.cn/devservice?source=bky&amp;hmsr=%E5%8D%9A%E5%AE%A2%E5%9B%AD&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=" target="_blank"><img width="468" height="60" src="./Unity3d之将terrain转化成mesh - 通臂猿猴 - 博客园_files/24442-20170908132742304-1045119416.gif" alt="极光0908"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/576251/" target="_blank">如何阅读计算机科学类的书</a><br> ·  <a href="http://kb.cnblogs.com/page/578103/" target="_blank">Google 及其云智慧</a><br> ·  <a href="http://kb.cnblogs.com/page/575829/" target="_blank">做到这一点，你也可以成为优秀的程序员</a><br> ·  <a href="http://kb.cnblogs.com/page/566880/" target="_blank">写给立志做码农的大学生</a><br> ·  <a href="http://kb.cnblogs.com/page/569057/" target="_blank">架构腐化之谜</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+</div></td>
+</tr>
+</tbody></table>
+</td>
+<td width="200" valign="top" style="border-left: dashed 1px #CCCCCC">
+<table align="center" width="100%" height="1400" cellspacing="0" cellpadding="5" border="0">
+<tbody><tr>
+<td class="banner" valign="top" style="padding-top: 0px">
+
+<table width="100%" height="200">
+<tbody><tr>
+<td>
+<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/08/01&#39;);return false;">&lt;</a></td><td align="center">2017年9月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/10/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td class="CalWeekendDay" align="center">2</td></tr><tr><td class="CalWeekendDay" align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td class="CalWeekendDay" align="center">9</td></tr><tr><td class="CalWeekendDay" align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td class="CalWeekendDay" align="center">16</td></tr><tr><td class="CalWeekendDay" align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td class="CalWeekendDay" align="center">23</td></tr><tr><td class="CalWeekendDay" align="center">24</td><td align="center">25</td><td align="center"><a href="http://www.cnblogs.com/jietian331/archive/2017/09/26.html"><u>26</u></a></td><td align="center">27</td><td align="center">28</td><td class="CalTodayDay" align="center">29</td><td class="CalWeekendDay" align="center">30</td></tr><tr><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+</td>
+</tr>
+</tbody></table>
+<div id="side_right">
+
+<h1>公告</h1>
+<div align="center" style="margin-top:10px;"><div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/jietian331/">通臂猿猴</a><br>园龄：<a href="http://home.cnblogs.com/u/jietian331/" title="入园时间：2013-03-27">4年6个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/jietian331/followers/">2</a><br>关注：<a href="http://home.cnblogs.com/u/jietian331/followees/">1</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;055a7e37-a896-e211-9010-c3d7423e3b07&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script></div>
+<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/jietian331/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/jietian331/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/jietian331/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/jietian331/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/jietian331/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+
+</div></div><div id="sidebar_toptags" class="sidebar-block"></div><div id="sidebar_categories">
+		<h1 class="listtitle">随笔档案</h1>
+		
+				<ul class="list" type="square">
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_0" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2017/09.html">2017年9月 (1)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_1" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2017/08.html">2017年8月 (1)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_2" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2017/07.html">2017年7月 (24)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_3" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2017/06.html">2017年6月 (10)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_4" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2017/05.html">2017年5月 (2)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_5" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2017/02.html">2017年2月 (2)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_6" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2016/10.html">2016年10月 (1)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_7" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2016/09.html">2016年9月 (2)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_8" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2016/08.html">2016年8月 (2)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_9" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2016/07.html">2016年7月 (3)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_10" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2016/06.html">2016年6月 (4)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_11" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2016/05.html">2016年5月 (1)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_12" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2016/03.html">2016年3月 (2)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_13" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2016/02.html">2016年2月 (1)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_14" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2016/01.html">2016年1月 (4)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_15" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2015/12.html">2015年12月 (4)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_16" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2015/11.html">2015年11月 (3)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_17" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2015/08.html">2015年8月 (2)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_18" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2014/11.html">2014年11月 (3)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_19" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2013/06.html">2013年6月 (1)</a> </li>
+			
+				<li class="listitem"><a id="CatList_LinkList_0_Link_20" class="listitem" href="http://www.cnblogs.com/jietian331/archive/2013/04.html">2013年4月 (12)</a> </li>
+			
+				</ul>
+			
+	
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<h3 class="catListTitle">最新评论</h3>
+<div class="RecentComment" id="RecentComments">
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/jietian331/p/5831062.html#3784063">1. Re:Unity3d之将terrain转化成mesh</a></li>
+        <li class="recent_comment_body">good</li>
+        <li class="recent_comment_author">--希望与绝望</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/jietian331/p/5831062.html#3604181">2. Re:Unity3d之将terrain转化成mesh</a></li>
+        <li class="recent_comment_body">不错，很牛逼啊，就是贴图数的修改，还有shader的贴图乘上uv有点蒙蔽！</li>
+        <li class="recent_comment_author">--Acsi</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<h3 class="catListTitle">阅读排行榜</h3>
+<div class="RecentComment" id="TopViewPosts"> 
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/jietian331/p/5831062.html">1. Unity3d之将terrain转化成mesh(2350)</a></li><li><a href="http://www.cnblogs.com/jietian331/p/5075487.html">2. Unity NGUI UIPanel下对粒子的剪裁(1731)</a></li><li><a href="http://www.cnblogs.com/jietian331/p/5025561.html">3. unity3d 之本地推送(1410)</a></li><li><a href="http://www.cnblogs.com/jietian331/p/5564901.html">4. CG之菲涅尔效果简单实现(1166)</a></li><li><a href="http://www.cnblogs.com/jietian331/p/5671101.html">5. 四元数小总结(1005)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<h3 class="catListTitle">评论排行榜</h3>
+<div class="RecentComment" id="TopCommentsPosts">
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/jietian331/p/5831062.html">1. Unity3d之将terrain转化成mesh(2)</a></li></ul></div>
+</div></div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/jietian331/p/5831062.html">1. Unity3d之将terrain转化成mesh(2)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+</div>
+
+<br>
+
+<div class="footer">
+	Powered by: <a href="http://www.cnblogs.com/">博客园</a><br>模板提供：<a href="http://blog.hjenglish.com/">沪江博客</a><br>
+	Copyright ©2017 通臂猿猴
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+
+</body></html>
